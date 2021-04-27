@@ -1,8 +1,8 @@
 <template>
   <div class="relative">
-  <div class="top-0 right-10 absolute dark:text-red-400 dark:text-red-700 text-green-700 font-bold">{{formatDate(article.updatedAt)}}</div>
   <div class="sc space-y-4 pb-8">
     <h1 class="text-4xl uppercase text-highlight">{{ article.title }}</h1>
+    <div class="dark:text-red-400 dark:text-red-700 text-green-700 font-bold">{{formatDate(article.updatedAt)}}</div>
     <h2 class="text-2xl text-gray-400">
       #{{ article.description }}
     </h2>
