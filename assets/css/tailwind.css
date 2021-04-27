@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @font-face {
+    font-family: "Inter";
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+    src: url("assets/fonts/Inter-roman.var.woff2?v=3.15") format("woff2");
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .mainAnimation {
+    animation: transitionIn 0.2s;
+  }
+  @keyframes transitionIn {
+    from {
+      opacity: 0;
+      transform: translateY(-18px);
+    }
+    to {
+      opacity: 1;
+      transform: rotateX(0);
+    }
+  }
+}
+@layer components {
+  html {
+    @apply bg-white text-gray-600 antialiased
+    dark:bg-gray-900 dark:text-gray-400;
+  }
+  ::selection {
+    @apply
+    bg-green-300 text-gray-600
+    dark:bg-red-600 dark:text-gray-200}
+  .sc {
+    @apply max-w-screen-md mx-auto px-4;
+  }
+  .sc-large {
+    @apply max-w-screen-2xl mx-auto px-4;
+  }
+
+  .svg-container {
+    @apply w-2/5
+    md:w-1/5
+    p-4
+    bg-svgSpecial
+    font-medium text-gray-50
+    border-2 border-white  border-solid rounded-xl
+    flex flex-col
+    dark:bg-svgSpecial_dark dark:bg-opacity-50 dark:text-gray-300 dark:border-gray-900;
+  }
+  .text-highlight {
+    @apply text-gray-900
+    dark:text-gray-50;
+  }
+}

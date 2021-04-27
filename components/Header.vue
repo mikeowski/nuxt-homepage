@@ -1,0 +1,20 @@
+<template>
+  <header class="sc pt-6 py-14">
+    <nav class="space-x-4 flex">
+      <NavItem :path="'/'"  :name="'Giriş'"/>
+      <NavItem :path="'/notes'" :name="'Notlar'"/>
+    </nav>
+  </header>
+</template>
+
+<script>
+import NavItem from './Nav-item'
+export default {
+  name: 'Header',
+  components: { NavItem },
+}
+</script>
+
+<style scoped>
+
+</style>
