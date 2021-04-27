@@ -1,5 +1,5 @@
 <template>
-  <div class="sc space-y-20">
+  <div class="sc space-y-20 pb-4">
    <div class="space-y-4">
      <h1 class="text-2xl font-medium text-highlight">
        Kendime Notlar
