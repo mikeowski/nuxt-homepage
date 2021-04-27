@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nuxt-link
+    <router-link
       :to="path"
       class="nav-link nav-link-ltr text-xl font-serif"
       :class="
@@ -14,7 +14,7 @@
         v-if="$route.path === path"
         class="absolute bottom-0 border-b-2 border-red-700 w-full"
       />
-    </nuxt-link>
+    </router-link>
   </div>
 </template>
 
