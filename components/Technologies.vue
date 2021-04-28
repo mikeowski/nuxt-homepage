@@ -60,8 +60,8 @@ export default {
       gsap.from('.technologies-box',{
         scrollTrigger:{
           trigger: '.technologies',
-          start: "top 5%",
-          end: "65% center",
+          start: "top center",
+          end: "80% center",
           scrub: true,
         },
         opacity:0,
@@ -72,19 +72,19 @@ export default {
         duration: 5,
 
       })
-      gsap.to('.technologies-box',{
-        scrollTrigger:{
-          trigger: '.technologies',
-          start:"5px top",
-          end: "50% 150px",
-          scrub: true,
-
-        },
-        opacity:0,
-        y: -100,
-        stagger: 0.1,
-        ease: 'back.in'
-      })
+      // gsap.to('.technologies-box',{
+      //   scrollTrigger:{
+      //     trigger: '.technologies',
+      //     start:"50% center",
+      //     end: "%70 center",
+      //     scrub: true,
+      //
+      //   },
+      //   opacity:0,
+      //   y: -100,
+      //   stagger: 0.1,
+      //   ease: 'back.in'
+      // })
 
       //tec animation
       gsap.to('.technologies',{
