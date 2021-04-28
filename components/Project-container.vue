@@ -3,8 +3,8 @@
     <a :href="href">
       <figure class="img">
         <img
-          :src="require(`~/assets/img/projects/${name}.png`)"
-          :alt="name"
+          :src="require(`~/assets/img/projects/${src}.png`)"
+          :alt="src"
           class="z-10 border dark:border-gray-400 border-gray-600"
         />
         <h1
@@ -21,7 +21,11 @@
 export default {
   name: 'ProjectContaier',
   props: {
-    name: {
+    src: {
+      type: String,
+      required: true,
+    },
+    name:{
       type: String,
       required: true,
     },
