@@ -19,7 +19,7 @@
           </h2>
 
           <p class="font-light text-lg">{{article.description}}</p>
-          <p class="text-sm py-2">{{formatDate(article.updatedAt)}}</p>
+          <p class="text-sm py-2">{{formatDate(article.created)}}</p>
         </nuxt-link>
       </li>
     </ul>
@@ -32,12 +32,13 @@ export default {
   async asyncData({ $content, params }) {
     let articles = await $content('articles', params.slug).fetch()
     articles = articles.sort((a, b) => {
-      return a.createdAt > b.createdAt ? -1 : 1
+      return a.created > b.created ? -1 : 1
     })
     return { articles }
   },
   methods: {
     formatDate(date) {
+      console.log(date)
       const options = { year: 'numeric', month: 'long', day: 'numeric',hour:'numeric',minute:'numeric' }
       return new Date(date).toLocaleDateString('tr', options)
     }

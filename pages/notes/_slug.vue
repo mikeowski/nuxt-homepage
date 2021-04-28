@@ -2,7 +2,7 @@
   <div class="relative">
   <div class="sc space-y-4 pb-8">
     <h1 class="text-4xl uppercase text-highlight">{{ article.title }}</h1>
-    <div class="dark:text-red-400 dark:text-red-700 text-green-700 font-bold">{{formatDate(article.createdAt)}}</div>
+    <div class="dark:text-red-400 dark:text-red-700 text-green-700 font-bold">{{formatDate(article.created)}}</div>
     <h2 class="text-2xl text-gray-400">
       #{{ article.description }}
     </h2>
@@ -40,5 +40,7 @@ export default {
   @apply font-bold}
 .nuxt-content p, li {
   @apply tracking-wide text-lg px-4}
+.nuxt-content pre{
+  @apply bg-gray-100  dark:bg-gray-200}
 
 </style>
