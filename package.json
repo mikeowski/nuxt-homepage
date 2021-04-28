@@ -14,8 +14,10 @@
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.9.1",
+    "gsap": "^3.6.1",
     "nuxt": "^2.15.3",
-    "nuxt-svg-loader": "^1.2.0"
+    "nuxt-svg-loader": "^1.2.0",
+    "vue-typical": "^1.6.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",
