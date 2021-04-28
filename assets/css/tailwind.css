@@ -43,8 +43,9 @@
   }
 
   .svg-container {
-    @apply w-2/5
-    md:w-1/5
+    @apply
+      text-xs md:text-sm
+    w-1/5
     p-4
     bg-svgSpecial
     font-medium text-gray-50
