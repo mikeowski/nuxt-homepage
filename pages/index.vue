@@ -31,7 +31,7 @@
       </div>
       </div>
     </div>
-    <div class="bottom-8 right-4 fixed flex justify-center items-center flex-col md:block sm:hidden text-center">  <arrow-down fill="white" /> Scroll <br/> Down</div>
+    <div class="bottom-8 right-4 fixed flex justify-center items-center flex-col md:block hidden text-center">  <arrow-down fill="white" /> Scroll <br/> Down</div>
 
   </div>
 </template>
