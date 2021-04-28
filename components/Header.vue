@@ -1,5 +1,5 @@
 <template>
-  <header class="sc pt-6 py-14">
+  <header class="sc py-6 z-50">
     <nav class="space-x-4 flex">
       <NavItem :path="'/'"  :name="'Giriş'"/>
       <NavItem :path="'/notes'" :name="'Notlar'"/>
