@@ -24,10 +24,11 @@
       <h1 class="text-center font-bold text-4xl mb-4 ">Projeler</h1>
       <div class="flex flex-wrap justify-center gap-4 sc-large">
         <ProjectContainer
-          :name="'quastionaire'"
+          :src="'quastionaire'"
+          :name="'Quastionaire'"
           :href="'https://quastionaire.vercel.app/'"
         />
-        <ProjectContainer :name="'personal_website'" />
+        <ProjectContainer :name="'Personal website'" :src="'personal_website'" />
       </div>
       </div>
     </div>
