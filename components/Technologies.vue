@@ -60,7 +60,7 @@ export default {
       gsap.from('.technologies-box',{
         scrollTrigger:{
           trigger: '.technologies',
-          start: "top 10%",
+          start: "top 5%",
           end: "65% center",
           scrub: true,
         },
