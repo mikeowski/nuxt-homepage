@@ -44,14 +44,13 @@
 
   .svg-container {
     @apply
-      text-xs md:text-sm
     w-1/5
     p-4
     bg-svgSpecial
-    font-medium text-gray-50
-    border-2 border-white  border-solid rounded-xl
+    font-medium text-gray-50 text-xs md:text-sm dark:text-gray-300
+    border border-white  border-solid rounded-xl dark:border-gray-900
     flex flex-col
-    dark:bg-svgSpecial_dark dark:bg-opacity-50 dark:text-gray-300 dark:border-gray-900;
+    dark:bg-svgSpecial_dark dark:bg-opacity-50
   }
   .text-highlight {
     @apply text-gray-900
