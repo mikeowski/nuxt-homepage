@@ -16,12 +16,12 @@
       </div>
     </div>
 
-    <div class="h-screen sc pt-12 flex items-end technologies opacity-0">
+    <div class="h-screen sc pt-12 flex items-center technologies opacity-0">
       <Technologies class="w-full"/>
     </div>
     <div class="pt-10 pb-4 h-screen flex items-center justify-center projects">
       <div>
-      <h1 class="text-center font-bold text-xl mb-4">Projeler</h1>
+      <h1 class="text-center font-bold text-4xl mb-4 ">Projeler</h1>
       <div class="flex flex-wrap justify-center gap-4 sc-large">
         <ProjectContainer
           :name="'quastionaire'"
