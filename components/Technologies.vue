@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="font-bold text-xl text-center mb-4 technologies-box">
+    <h1 class="font-bold text-4xl text-center mb-4">
       İlgilendiğim Teknolojiler
     </h1>
     <div class="flex flex-wrap items-center md:justify-evenly justify-center">
@@ -60,30 +60,30 @@ export default {
       gsap.from('.technologies-box',{
         scrollTrigger:{
           trigger: '.technologies',
-          start: "top center",
-          end: "60% center",
+          start: "top 10%",
+          end: "65% center",
           scrub: true,
         },
         opacity:0,
         delay: 1,
         stagger: 0.3,
         ease: 'elastic',
-        scale:1,
-        duration: 5
+        scale:0.5,
+        duration: 5,
 
       })
       gsap.to('.technologies-box',{
         scrollTrigger:{
           trigger: '.technologies',
-          start:"10px 20%",
-          end: "65% 200px",
+          start:"5px top",
+          end: "50% 150px",
           scrub: true,
 
         },
         opacity:0,
         y: -100,
         stagger: 0.1,
-        ease: 'back.out'
+        ease: 'back.in'
       })
 
       //tec animation
