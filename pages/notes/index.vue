@@ -32,7 +32,7 @@ export default {
   async asyncData({ $content, params }) {
     let articles = await $content('articles', params.slug).fetch()
     articles = articles.sort((a, b) => {
-      return a.updatedAt > b.updatedAt ? -1 : 1
+      return a.createdAt > b.createdAt ? -1 : 1
     })
     return { articles }
   },
