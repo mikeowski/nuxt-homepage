@@ -63,7 +63,6 @@ export default {
           start: "top center",
           end: "60% center",
           scrub: true,
-          markers: true
         },
         opacity:0,
         delay: 1,
