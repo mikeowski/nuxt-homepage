@@ -1,25 +1,29 @@
 <template>
   <div class="space-y-20 relative">
-    <div class="sc h-screen flex items-center justify-center pb-24">
-      <div class="space-y-12">
-        <nuxt-link to="/notes starter">
+    <div class="sc h-screen flex items-center justify-center pb-24 pt-48">
+      <div>
+        <nuxt-link to="/notes starter" class="w-full">
           <typical
-            class="text-6xl font-bold text-highlight text-center hover:text-green-300 "
+            class="text-6xl md:text-7xl font-bold text-highlight text-center hover:text-green-300 "
             :steps="['{Merhaba',800 , '{Merhaba Dünya!}', 500, '{Ben Burak 👋🏽}']"
             :wrapper="'h1'"
           ></typical>
         </nuxt-link>
-
-        <p class="text-2xl text-center description">
-          Front-end teknolojileri, tasarım araçları gibi konulara ilgiliyim
+        <div class="description pt-48">
+        <p class="font-bold text-xl  text-center">
+         Merhaba ben Burak Mike 20 yaşında, <br/> Front-end teknolojileri ve tasarım araçları gibi konularla <br/>yakından ilgileniyorum  <br/> Kendimce geliştirdiğim Projelerime <a href="https://github.com/MahykBurak" class="hover:text-green-300 underline">Github</a> adresimden ulaşabilirisniz
         </p>
+        <div class="pt-12 opacity-100 flex justify-center">
+          <Social/>
+        </div>
+        </div>
       </div>
     </div>
 
     <div class="h-screen sc pt-12 flex items-center technologies opacity-0">
       <Technologies class="w-full"/>
     </div>
-    <div class="pt-10 pb-4 h-screen flex items-center justify-center projects">
+    <div class="pt-10 pb-4 h-screen flex items-baseline justify-center projects">
       <div>
       <h1 class="text-center font-bold text-4xl mb-4 ">Projeler</h1>
       <div class="flex flex-wrap justify-center gap-4 sc-large">
@@ -42,14 +46,38 @@ import typical from 'vue-typical'
 import ProjectContainer from '../components/Project-container'
 import Technologies from '../components/Technologies'
 import arrowDown from '../assets/icons/arrow-down.svg'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import Social from "../components/Social";
 
 export default {
   name: 'Home',
   components: {
+    Social,
     ProjectContainer,
     Technologies,
     typical,
     arrowDown
   },
+  mounted() {
+    this.Animation()
+  },
+  methods:{
+    Animation(){
+      gsap.registerPlugin(ScrollTrigger)
+      gsap.from('.description', {
+        scrollTrigger:{
+          trigger:'.starter',
+          start:'170px top',
+          toggleActions: 'restart pause resume reverse',
+          //markers:true
+        },
+        duration:1.5,
+        y:300,
+        opacity: 0,
+
+      })
+    }
+  }
 }
 </script>
