@@ -1,15 +1,15 @@
 <template>
-  <div class="space-y-20 relative">
-    <div class="sc h-screen flex items-center justify-center pb-24 pt-72">
+  <div class="space-y-20">
+    <div class="sc h-screen flex items-center justify-center pb-24 pt-80 starter">
       <div>
         <div>
           <typical
-            class="text-6xl md:text-7xl font-bold text-highlight text-center hover:text-green-400 "
-            :steps="['{Merhaba',800 , '{Merhaba Dünya!}', 500, '{Ben Burak 👋🏽}']"
+            class="text-4xl sm:text-6xl md:text-7xl font-bold text-highlight text-center text-green-500 "
+            :steps="['{Merhaba',700 , '{Merhaba Dünya!}', 500, '{Ben Burak 👋🏽}']"
             :wrapper="'h1'"
           ></typical>
         </div>
-        <div class="description pt-48 opacity-0">
+        <div class="description pt-32 opacity-0">
         <p class="font-bold text-xl  text-center">
          Merhaba ben Burak Mike 20 yaşında, <br/>devoloper ve aynı zamanda Akdeniz Üniversitesi'nde öğrenciyim.<br/> <br/>Front-end teknolojileri ve tasarım araçları gibi konularla <br/>yakından ilgileniyorum.<br/> Kendimce geliştirdiğim Projelerime Github adresimden ulaşabilirisiniz
         </p>
@@ -19,8 +19,7 @@
         </div>
       </div>
     </div>
-
-    <div class="h-screen sc pt-12 flex items-center technologies opacity-0">
+    <div class="h-screen sc flex items-center technologies opacity-0 pb-52">
       <Technologies class="w-full"/>
     </div>
     <div class="pt-10 pb-4 h-screen flex items-baseline justify-center projects">
@@ -68,21 +67,22 @@ export default {
       gsap.to('.description', {
         scrollTrigger:{
           trigger:'.starter',
-          start:'170px top',
+          start:'50px top',
           toggleActions: 'restart pause resume reverse',
           //markers:true
         },
         opacity: 1,
-
+        ease:'none'
       })
       gsap.from('.description', {
         scrollTrigger:{
           trigger:'.starter',
-          start:'170px top',
+          start:'100px top',
           toggleActions: 'restart pause resume reverse',
           //markers:true
         },
-        y:400
+
+        y:500,
 
       })
     }
