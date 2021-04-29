@@ -56,4 +56,9 @@
     @apply text-gray-900
     dark:text-gray-50;
   }
+  .social-container{
+    @apply flex items-center justify-center bg-gray-200 text-gray-600 rounded-full transition-colors
+    hover:bg-opacity-75
+    dark:bg-gray-700 dark:text-gray-300 p-3
+  }
 }
