@@ -2,14 +2,14 @@
   <div class="space-y-20 relative">
     <div class="sc h-screen flex items-center justify-center pb-24 pt-48">
       <div>
-        <nuxt-link to="/notes starter" class="w-full">
+        <nuxt-link to="/notes starter">
           <typical
             class="text-6xl md:text-7xl font-bold text-highlight text-center hover:text-green-300 "
             :steps="['{Merhaba',800 , '{Merhaba Dünya!}', 500, '{Ben Burak 👋🏽}']"
             :wrapper="'h1'"
           ></typical>
         </nuxt-link>
-        <div class="description pt-48">
+        <div class="description pt-48 opacity-0">
         <p class="font-bold text-xl  text-center">
          Merhaba ben Burak Mike 20 yaşında, <br/> Front-end teknolojileri ve tasarım araçları gibi konularla <br/>yakından ilgileniyorum  <br/> Kendimce geliştirdiğim Projelerime <a href="https://github.com/MahykBurak" class="hover:text-green-300 underline">Github</a> adresimden ulaşabilirisniz
         </p>
