@@ -11,7 +11,7 @@
         </div>
         <div class="description pt-48 opacity-0">
         <p class="font-bold text-xl  text-center">
-         Merhaba ben Burak Mike 20 yaşında, <br/>devoloper ve aynı zamanda Akdeniz Üniversitesin'de öğrenciyim.<br/> <br/>Front-end teknolojileri ve tasarım araçları gibi konularla <br/>yakından ilgileniyorum.<br/> Kendimce geliştirdiğim Projelerime Github adresimden ulaşabilirisiniz
+         Merhaba ben Burak Mike 20 yaşında, <br/>devoloper ve aynı zamanda Akdeniz Üniversitesi'nde öğrenciyim.<br/> <br/>Front-end teknolojileri ve tasarım araçları gibi konularla <br/>yakından ilgileniyorum.<br/> Kendimce geliştirdiğim Projelerime Github adresimden ulaşabilirisiniz
         </p>
         <div class="pt-12 opacity-100 flex justify-center">
           <Social/>
