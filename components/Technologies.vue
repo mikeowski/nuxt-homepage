@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <h1 class="font-bold text-4xl text-center mb-4">
+  <div class="pt-32">
+    <h1 class="font-bold text-4xl text-center mb-4 technologies-text">
       İlgilendiğim Teknolojiler
     </h1>
-    <div class="flex flex-wrap items-center md:justify-evenly justify-center">
+    <div class="flex flex-wrap items-center md:justify-evenly justify-center technologies-container">
       <technologies-container :href="JavaScriptLink"  class="technologies-box" :name="'JavaScript'">
         <IconJs fill="white" />
       </technologies-container>
@@ -61,7 +61,7 @@ export default {
         scrollTrigger:{
           trigger: '.technologies',
           start: "top center",
-          end: "80% center",
+          end: "70% center",
           scrub: true,
         },
         opacity:0,
@@ -72,19 +72,6 @@ export default {
         duration: 5,
 
       })
-      // gsap.to('.technologies-box',{
-      //   scrollTrigger:{
-      //     trigger: '.technologies',
-      //     start:"50% center",
-      //     end: "%70 center",
-      //     scrub: true,
-      //
-      //   },
-      //   opacity:0,
-      //   y: -100,
-      //   stagger: 0.1,
-      //   ease: 'back.in'
-      // })
 
       //tec animation
       gsap.to('.technologies',{
