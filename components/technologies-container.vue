@@ -1,10 +1,10 @@
 <template>
-  <a :href="href" class="svg-container">
+  <a :href="href" class="svg-container technologies-box">
     <figure class="item">
       <slot />
     </figure>
-    <hr class="mt-5 border border-gray-200 dark:border-gray-300 hidden md:inline-block" />
-    <h1 class="text-center mt-4 hidden md:inline ">{{ name }}</h1>
+    <hr class="mt-5 border border-gray-200 dark:border-gray-300 hidden sm:inline-block" />
+    <h1 class="text-center mt-4 hidden sm:inline ">{{ name }}</h1>
   </a>
 </template>
 
