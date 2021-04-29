@@ -34,7 +34,7 @@
   ::selection {
     @apply
     bg-green-300 text-gray-600
-    dark:bg-red-600 dark:text-gray-200}
+    dark:bg-green-500 dark:text-gray-100}
   .sc {
     @apply max-w-screen-md mx-auto px-4;
   }
