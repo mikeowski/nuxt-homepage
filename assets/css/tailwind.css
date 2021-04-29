@@ -45,10 +45,11 @@
   .svg-container {
     @apply
     w-1/5
+    md:w-1/4
     p-4
     bg-svgSpecial
     font-medium text-gray-50 text-sm dark:text-gray-300
-    border border-white  border-solid rounded-xl dark:border-gray-900
+    border-2 border-white  border-solid rounded-xl dark:border-gray-900
     flex flex-col
     dark:bg-svgSpecial_dark dark:bg-opacity-50
   }

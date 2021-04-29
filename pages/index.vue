@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="h-screen sc flex items-center technologies opacity-0 pb-52">
+    <div class="h-screen sc flex items-center technologies opacity-0">
       <Technologies class="w-full"/>
     </div>
     <div class="pt-10 pb-4 h-screen flex items-baseline justify-center projects">

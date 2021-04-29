@@ -1,23 +1,31 @@
 <template>
-  <div class="pt-32">
+  <div class="pt-40">
     <h1 class="font-bold text-4xl text-center mb-4 technologies-text">
       İlgilendiğim Teknolojiler
     </h1>
-    <div class="flex flex-wrap items-center md:justify-evenly justify-center technologies-container">
-      <technologies-container :href="JavaScriptLink"  class="technologies-box" :name="'JavaScript'">
+    <div
+      class="flex flex-wrap items-center md:justify-evenly justify-center technologies-container"
+    >
+      <technologies-container :href="JavaScriptLink" :name="'JavaScript'">
         <IconJs fill="white" />
       </technologies-container>
-      <technologies-container :href="nodeLink" class="technologies-box" :name="'Node Js'">
+      <technologies-container :href="nodeLink" :name="'Node Js'">
         <IconNode fill="#32B67A" />
       </technologies-container>
-      <technologies-container :href="vueLink" class="technologies-box" :name="'Vue Js'">
+      <technologies-container :href="vueLink" :name="'Vue Js'">
         <IconVue fill="#17C37B" />
       </technologies-container>
-      <technologies-container :href="tailwindLink" class="technologies-box" :name="'Tailwind'">
+      <technologies-container :href="tailwindLink" :name="'Tailwind'">
         <IconTailwind fill="#0033FF" />
       </technologies-container>
-      <technologies-container :href="figmaLink" class="technologies-box" :name="'Figma'">
+      <technologies-container :href="figmaLink" :name="'Figma'">
         <IconFigma fill="red" />
+      </technologies-container>
+      <technologies-container :href="nuxtLink" :name="'Nuxt Js'">
+        <IconNuxt fill="#17C37B" />
+      </technologies-container>
+      <technologies-container :href="cssTrickLink" :name="'Css'">
+        <IconCss fill="#E54B4B" />
       </technologies-container>
     </div>
   </div>
@@ -26,12 +34,14 @@
 <script>
 import IconJs from '../assets/icons/logo-javascript.svg'
 import IconNode from '../assets/icons/node-dot-js.svg'
+import IconCss from '../assets/icons/css3.svg'
 import IconVue from '../assets/icons/vue-dot-js.svg'
 import IconFigma from '../assets/icons/figma.svg'
+import IconNuxt from '../assets/icons/nuxt-dot-js.svg'
 import IconTailwind from '../assets/icons/tailwindcss.svg'
 import TechnologiesContainer from './technologies-container'
-import {gsap} from 'gsap'
-import {ScrollTrigger} from 'gsap/dist/ScrollTrigger'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 export default {
   name: 'Technologies',
   components: {
@@ -41,6 +51,8 @@ export default {
     IconVue,
     IconFigma,
     IconTailwind,
+    IconNuxt,
+    IconCss,
   },
   data() {
     return {
@@ -49,49 +61,46 @@ export default {
       vueLink: 'https://vuejs.org/',
       nodeLink: 'https://nodejs.org/en/',
       JavaScriptLink: 'https://www.javascript.com/',
+      nuxtLink: 'https://nuxtjs.org/',
+      cssTrickLink: 'https://css-tricks.com/',
     }
   },
   mounted() {
     this.ScrollAnimation()
   },
-  methods:{
-    ScrollAnimation(){
+  methods: {
+    ScrollAnimation() {
       gsap.registerPlugin(ScrollTrigger)
-      gsap.from('.technologies-box',{
-        scrollTrigger:{
+      gsap.from('.technologies-box', {
+        scrollTrigger: {
           trigger: '.technologies',
-          start: "top center",
-          end: "70% center",
+          start: 'top 60%',
+          end: '60% center',
           scrub: true,
         },
-        opacity:0,
+        opacity: 0,
         delay: 1,
         stagger: 0.3,
         ease: 'elastic',
-        scale:0.5,
+        scale: 0.5,
         duration: 5,
-
       })
 
       //tec animation
-      gsap.to('.technologies',{
-        scrollTrigger:{
+      gsap.to('.technologies', {
+        scrollTrigger: {
           trigger: '.technologies',
-          start: "top center",
-          end: "center center",
+          start: 'top center',
+          end: 'center center',
           scrub: true,
-
         },
-        opacity:1,
-        y:-300,
-        scale:1,
-        duration: 5
-
+        opacity: 1,
+        y: -300,
+        scale: 1,
+        duration: 5,
       })
-    }
-  }
-
-
+    },
+  },
 }
 </script>
 
