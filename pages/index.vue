@@ -1,17 +1,17 @@
 <template>
   <div class="space-y-20 relative">
-    <div class="sc h-screen flex items-center justify-center pb-24 pt-48">
+    <div class="sc h-screen flex items-center justify-center pb-24 pt-72">
       <div>
-        <nuxt-link to="/notes starter">
+        <div>
           <typical
-            class="text-6xl md:text-7xl font-bold text-highlight text-center hover:text-green-300 "
+            class="text-6xl md:text-7xl font-bold text-highlight text-center hover:text-green-400 "
             :steps="['{Merhaba',800 , '{Merhaba Dünya!}', 500, '{Ben Burak 👋🏽}']"
             :wrapper="'h1'"
           ></typical>
-        </nuxt-link>
+        </div>
         <div class="description pt-48 opacity-0">
         <p class="font-bold text-xl  text-center">
-         Merhaba ben Burak Mike 20 yaşında, <br/> Front-end teknolojileri ve tasarım araçları gibi konularla <br/>yakından ilgileniyorum  <br/> Kendimce geliştirdiğim Projelerime <a href="https://github.com/MahykBurak" class="hover:text-green-300 underline">Github</a> adresimden ulaşabilirisniz
+         Merhaba ben Burak Mike 20 yaşında, <br/>devoloper ve aynı zamanda Akdeniz Üniversitesin'de öğrenciyim.<br/> <br/>Front-end teknolojileri ve tasarım araçları gibi konularla <br/>yakından ilgileniyorum.<br/> Kendimce geliştirdiğim Projelerime Github adresimden ulaşabilirisiniz
         </p>
         <div class="pt-12 opacity-100 flex justify-center">
           <Social/>
@@ -65,6 +65,16 @@ export default {
   methods:{
     Animation(){
       gsap.registerPlugin(ScrollTrigger)
+      gsap.to('.description', {
+        scrollTrigger:{
+          trigger:'.starter',
+          start:'170px top',
+          toggleActions: 'restart pause resume reverse',
+          //markers:true
+        },
+        opacity: 1,
+
+      })
       gsap.from('.description', {
         scrollTrigger:{
           trigger:'.starter',
@@ -72,9 +82,7 @@ export default {
           toggleActions: 'restart pause resume reverse',
           //markers:true
         },
-        duration:1.5,
-        y:300,
-        opacity: 0,
+        y:400
 
       })
     }
