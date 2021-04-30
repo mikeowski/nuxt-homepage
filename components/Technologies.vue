@@ -76,27 +76,14 @@ export default {
           trigger: '.technologies',
           start: 'top 60%',
           end: '60% center',
-          scrub: true,
+          scrub: 1,
         },
+        y:300,
         opacity: 0,
         delay: 1,
         stagger: 0.3,
-        ease: 'elastic',
+        ease: 'slow',
         scale: 0.5,
-        duration: 5,
-      })
-
-      //tec animation
-      gsap.to('.technologies', {
-        scrollTrigger: {
-          trigger: '.technologies',
-          start: 'top center',
-          end: 'center center',
-          scrub: true,
-        },
-        opacity: 1,
-        y: -300,
-        scale: 1,
         duration: 5,
       })
     },
