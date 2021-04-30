@@ -19,10 +19,10 @@
           ></typical>
         </div>
         <!--Description-->
-        <div class="description pt-32 opacity-0">
-          <p class="font-bold text-xl text-center">
+        <div class="pt-32 ">
+          <p class="font-bold text-xl text-center description">
             Merhaba ben Burak Mike 20 yaşında, <br />developer ve aynı zamanda
-            Akdeniz Üniversitesi'nde öğrenciyim.<br />
+            Akdeniz Üniversitesi'nde öğrenciyim.<br/>
             <br />Front-end teknolojileri ve tasarım araçları gibi konularla
             <br />yakından ilgileniyorum.<br />
             Kendimce geliştirdiğim Projelerime Github adresimden
@@ -82,25 +82,24 @@ export default {
   methods: {
     Animation() {
       gsap.registerPlugin(ScrollTrigger)
-      gsap.to('.description', {
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: '.starter',
-          start: '50px top',
+          start: '200px top',
           toggleActions: 'restart pause resume reverse',
           //markers:true
         },
-        opacity: 1,
-        ease: 'slow',
       })
-      gsap.from('.description', {
-        scrollTrigger: {
-          trigger: '.starter',
-          start: '100px top',
-          toggleActions: 'restart pause resume reverse',
-          //markers:true
-        },
-        ease:'slow',
+      tl.from('.description', {
+        opacity: 0,
+        ease: 'power1',
+        duration:0.5,
+        stagger:0.3,
         y: 500,
+      }).from('.social-container', {
+        opacity: 0,
+        stagger:0.2,
+        ease: 'power1',
       })
     },
   },
