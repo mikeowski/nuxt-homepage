@@ -19,8 +19,8 @@
           ></typical>
         </div>
         <!--Description-->
-        <div class="pt-32 ">
-          <p class="font-bold text-xl text-center description">
+        <div class="pt-32">
+          <p class="font-bold text-xl text-center description opacity-0">
             Merhaba ben Burak Mike 20 yaşında, <br />developer ve aynı zamanda
             Akdeniz Üniversitesi'nde öğrenciyim.<br/>
             <br />Front-end teknolojileri ve tasarım araçları gibi konularla
@@ -90,8 +90,13 @@ export default {
           //markers:true
         },
       })
+      gsap.to('.description',{ scrollTrigger: {
+          trigger: '.starter',
+          start: '200px top',
+          toggleActions: 'restart pause resume reverse',
+          //markers:true
+        },opacity:1})
       tl.from('.description', {
-        opacity: 0,
         ease: 'power1',
         duration:0.5,
         stagger:0.3,

@@ -36,11 +36,11 @@ export default {
        },
      })
      tl.from('.Project-container',{
-
+       delay:1,
        stagger:0.6,
        duration:2,
-       y:100,
-       scale:0.8,
+       y:50,
+       scale:0.9,
        opacity:0,
        ease:'power2.easeInOut',
      }).from('.Project-container h1',{
@@ -51,7 +51,7 @@ export default {
          scrub:2,
        },
        stragger:0.6,
-       y:200,
+       y:100,
        delay:10,
        opacity:0,
        ease:'power1.easeInOut',
