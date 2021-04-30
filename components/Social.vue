@@ -2,7 +2,7 @@
   <div class="flex space-x-4">
     <div class="social-container">
       <a href="mailto:burakmahyk@gmail.com">
-        <Span class="font-bold">EPosta</Span>
+        <Span class="font-bold">Eposta</Span>
       </a>
     </div>
     <div class="social-container ">
