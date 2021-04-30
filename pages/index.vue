@@ -101,10 +101,10 @@ export default {
         duration:0.5,
         stagger:0.3,
         y: 500,
-      }).from('.social-container', {
-        opacity: 0,
+      }).to('.social-container', {
+        opacity:1,
         stagger:0.2,
-        ease: 'power1',
+        ease:'power1',
       })
     },
   },

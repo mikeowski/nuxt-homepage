@@ -1,21 +1,21 @@
 <template>
   <div class="flex space-x-4">
-    <div class="social-container">
+    <div class="social-container opacity-0">
       <a href="mailto:burakmahyk@gmail.com">
         <Span class="font-bold">Eposta</Span>
       </a>
     </div>
-    <div class="social-container ">
+    <div class="social-container opacity-0">
       <a href="https://twitter.com/burakmahyk">
         <IconTwitter />
       </a>
     </div>
-    <div class="social-container ">
+    <div class="social-container opacity-0">
       <a href="https://www.instagram.com/brk_mahyk/">
         <IconInstagram />
       </a>
     </div>
-    <div class="social-container ">
+    <div class="social-container opacity-0">
       <a href="https://github.com/MahykBurak">
         <IconGithub />
       </a>
