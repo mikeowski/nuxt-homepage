@@ -1,18 +1,18 @@
 <template>
-  <div class="md:w-2/5 w-full flex relative flex-grow">
+  <div id="Project-container" class="md:w-2/5 w-full flex relative flex-grow">
     <a :href="href">
-      <figure class="img">
+      <div class="img">
         <img
           :src="require(`~/assets/img/projects/${src}.png`)"
           :alt="src"
-          class="z-10 border dark:border-gray-400 border-gray-600"
+          class="z-10"
         />
         <h1
           class="font-extrabold text-white text-2xl z-30 absolute bottom-10 right-16"
         >
           {{ name }}
         </h1>
-      </figure>
+      </div>
     </a>
   </div>
 </template>
