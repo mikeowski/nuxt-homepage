@@ -27,21 +27,23 @@ export default {
   methods:{
    Animate(){
      gsap.registerPlugin(ScrollTrigger)
-     gsap.from('.Project-container',{
+     const tl = gsap.timeline({
        scrollTrigger:{
          trigger:'#Projects',
          start:'top 90%',
          end:'bottom 80%',
          scrub:2,
        },
+     })
+     tl.from('.Project-container',{
+
        stagger:0.6,
        duration:2,
-       y:200,
-       scale:0.7,
+       y:100,
+       scale:0.8,
        opacity:0,
        ease:'power2.easeInOut',
-     })
-     gsap.from('.Project-container h1',{
+     }).from('.Project-container h1',{
        scrollTrigger:{
          trigger:'#Projects',
          start:'top 90%',
@@ -49,7 +51,7 @@ export default {
          scrub:2,
        },
        stragger:0.6,
-       y:300,
+       y:200,
        delay:10,
        opacity:0,
        ease:'power1.easeInOut',
