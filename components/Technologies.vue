@@ -1,6 +1,6 @@
 <template>
   <div class="pt-40">
-    <h1 class="font-bold text-4xl text-center mb-4 technologies-text">
+    <h1 class="font-bold text-4xl text-center mb-8 technologies-text">
       İlgilendiğim Teknolojiler
     </h1>
     <div
@@ -81,8 +81,8 @@ export default {
         y:300,
         opacity: 0,
         delay: 1,
-        stagger: 0.3,
-        ease: 'slow',
+        stagger: 0.6,
+        ease: 'back',
         scale: 0.5,
         duration: 5,
       })
