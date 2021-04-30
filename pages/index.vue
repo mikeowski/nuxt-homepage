@@ -35,16 +35,20 @@
       </div>
     </div>
     <!--Technologies I'm interested in-->
-    <div class="h-screen sc flex items-center technologies">
+    <div class="h-screen sc flex flex-col items-center technologies">
       <Technologies class="w-full" />
     </div>
     <!-- My Projects-->
     <div
-      class="pt-10 pb-4 h-screen flex items-baseline justify-center projects"
+      class="pt-10 pb-4 h-screen flex flex-col items-center justify-baseline projects gap-4"
     >
       <div>
         <h1 class="text-center font-bold text-4xl mb-4">Projeler</h1>
         <Projects/>
+
+      </div>
+      <div class="w-full flex justify-center pb-4 bg-white">
+      <img src="~/assets/img/BMStudio-Code.png" class="w-1/2">
       </div>
     </div>
     <div
