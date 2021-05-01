@@ -7,7 +7,7 @@
       </div>
       <h2 class="text-2xl text-gray-400">#{{ article.description }}</h2>
       <hr />
-      <nuxt-content :document="article" />
+      <nuxt-content :document="article"/>
     </div>
   </div>
 </template>
