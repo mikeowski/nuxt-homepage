@@ -13,9 +13,9 @@
       <li v-for="article of articles" :key="article.slug" >
 
         <nuxt-link :to="`/notes/${article.slug}`">
-          <h2 class="text-xl font-bold inline-block">
+          <h2 class="text-xl font-bold underline hover:text-green-700">
             {{article.title.toUpperCase()}}
-            <hr class="w-full border-gray-600 dark:border-gray-400"/>
+           <!-- <hr class="w-full border-gray-600 dark:border-gray-400"/> -->
           </h2>
 
           <p class="font-light text-lg">{{article.description}}</p>

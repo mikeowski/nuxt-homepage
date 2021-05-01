@@ -40,7 +40,15 @@ export default {
   @apply font-bold}
 .nuxt-content p, li {
   @apply tracking-wide text-lg px-4}
-.nuxt-content pre{
-  @apply bg-gray-100  dark:bg-gray-200}
+.nuxt-content code{
+  @apply bg-opacity-0
+  font-mono
+}
+.nuxt-content blockquote{
+  @apply bg-gray-600
+  text-gray-50 dark:text-gray-200
+  py-3 pl-2
+  border-l-8 border-green-500
+}
 
 </style>
