@@ -19,7 +19,7 @@
           </h2>
 
           <p class="font-light text-lg">{{article.description}}</p>
-          <p class="text-sm py-2">{{formatDate(article.createdAt)}}</p>
+          <p class="text-sm py-2">{{formatDate(article.created)}}</p>
         </nuxt-link>
       </li>
     </ul>
