@@ -44,8 +44,8 @@ export default {
   filter: blur(0);
 }
 .img img {
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
