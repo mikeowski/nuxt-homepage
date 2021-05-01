@@ -13,12 +13,12 @@
     scroll-behavior: smooth;
   }
   .mainAnimation {
-    animation: transitionIn 0.2s;
+    animation: transitionIn 0.3s;
   }
   @keyframes transitionIn {
     from {
       opacity: 0;
-      transform: translateY(-18px);
+      transform: translateY(-20px);
     }
     to {
       opacity: 1;
