@@ -39,7 +39,6 @@ export default {
        delay:1,
        stagger:0.6,
        duration:2,
-       scale:0.9,
        opacity:0,
        ease:'power2.easeInOut',
      }).from('.Project-container h1',{

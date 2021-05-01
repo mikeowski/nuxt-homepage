@@ -47,9 +47,6 @@
         <Projects/>
 
       </div>
-      <div class="w-full flex justify-center pb-4 bg-white">
-      <img src="~/assets/img/BMStudio-Code.png" class="w-1/2">
-      </div>
     </div>
     <div
       class="bottom-8 right-4 fixed flex justify-center items-center flex-col md:block hidden text-center"
