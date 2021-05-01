@@ -61,5 +61,7 @@ export default {
   build: {},
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+    authdomain: process.env.authdomain || 'dev-03z1b31t.eu.auth0.com',
+    authclient: process.env.authclient || 'YBR6Ej8LfEwxJYkKvJq4uhilB2TxrgVF',
   },
 }

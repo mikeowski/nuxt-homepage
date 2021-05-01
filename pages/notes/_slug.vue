@@ -1,5 +1,6 @@
 <template>
   <div class="relative pt-8">
+
     <div class="sc space-y-4 pb-8">
       <div>
         <h1 class="text-6xl uppercase text-highlight">{{ article.title }}</h1>
