@@ -99,9 +99,8 @@ export default {
         },opacity:1})
       tl.from('.description', {
         ease: 'power1',
-        duration:0.5,
         stagger:0.3,
-        y: 500,
+        y: 200,
       }).to('.social-container', {
         opacity:1,
         stagger:0.2,
