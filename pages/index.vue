@@ -35,17 +35,16 @@
       </div>
     </div>
     <!--Technologies I'm interested in-->
-    <div class="h-screen sc flex flex-col items-center technologies">
+    <div class="h-screen sc flex  items-center justify-center technologies">
       <Technologies class="w-full" />
     </div>
     <!-- My Projects-->
     <div
-      class="pt-10 pb-4 h-screen flex flex-col items-center justify-baseline projects gap-4"
+      class="pt-14 pb-4 h-screen flex flex-col items-center justify-baseline projects gap-4"
     >
       <div>
         <h1 class="text-center font-bold text-4xl mb-4">Projeler</h1>
         <Projects/>
-
       </div>
     </div>
     <div
