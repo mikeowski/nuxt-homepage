@@ -1,6 +1,5 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  target: 'server',
   head: {
     title: 'Burak Mike',
     meta: [
