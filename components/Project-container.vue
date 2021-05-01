@@ -6,6 +6,8 @@
           :src="require(`~/assets/img/projects/${src}.png`)"
           :alt="src"
           class="z-10"
+          width="100%"
+          height="100%"
         />
         <h1
           class="font-extrabold text-white text-2xl z-30 absolute bottom-10 right-16"
