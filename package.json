@@ -11,8 +11,10 @@
     "lint": "yarn lint:js"
   },
   "dependencies": {
+    "@auth0/auth0-spa-js": "^1.15.0",
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/pwa": "^3.3.5",
+    "@tailwindcss/typography": "^0.4.0",
     "core-js": "^3.9.1",
     "gsap": "^3.6.1",
     "nuxt": "^2.15.3",

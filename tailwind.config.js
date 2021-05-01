@@ -1,4 +1,4 @@
-const { fontFamily } = require('tailwindcss/defaultTheme')
+const { fontFamily, spacing } = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 module.exports = {
   jit: true,
@@ -20,10 +20,34 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: 'inherit',
+            'h2, h3, h4, h5': {
+              'scroll-margin-top': spacing[32],
+            },
+            hr: {
+              'border-color': colors.gray['200'],
+            },
+            '*': {
+              color: 'inherit !important',
+            },
+          },
+        },
+        dark: {
+          css: {
+            hr: {
+              'border-color': colors.gray['700'],
+            },
+          },
+        },
+      }),
     },
   },
   variants: {
+    typography: ['dark'],
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 }
