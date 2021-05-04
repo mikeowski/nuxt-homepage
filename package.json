@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.15.0",
+    "@hapi/boom": "^9.1.2",
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@tailwindcss/typography": "^0.4.0",
@@ -20,6 +21,7 @@
     "express": "^4.17.1",
     "gsap": "^3.6.1",
     "ioredis": "^4.27.1",
+    "luxon": "^1.26.0",
     "nanoid": "^3.1.22",
     "nuxt": "^2.15.3",
     "nuxt-svg-loader": "^1.2.0",

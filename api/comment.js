@@ -1,5 +1,11 @@
 import { nanoid } from 'nanoid'
 import Redis from 'ioredis'
+import Boom from '@hapi/boom'
+
+const errorResponse = (res, error) => {
+  const { output } = error
+  return res.status(output.statusCode).json(output.payload)
+}
 
 const express = require('express')
 const bp = require('body-parser')
@@ -12,7 +18,7 @@ app.all('/', async function (req, res) {
     console.log(text, url, user)
 
     if (!text || !url || !user) {
-      res.status(400).json({ message: 'parametreler eksik veya hatalı' })
+      return errorResponse(res, Boom.badData('Parametreler eksik'))
     }
     const comment = {
       id: nanoid(),
@@ -26,7 +32,7 @@ app.all('/', async function (req, res) {
     res.status(200).json(comment)
     //redis connection
     let redis = new Redis(
-      'redis://:c24c148968a94037bcd9c29ded967a17@eu1-capital-sparrow-31880.upstash.io:31880'
+      'redis://:cd9325e584e94ca2bc669cadc9bee755@eu1-alive-pipefish-31892.upstash.io:31892'
     )
     //redis write
     redis.lpush(url, JSON.stringify(comment))
@@ -35,10 +41,11 @@ app.all('/', async function (req, res) {
     //response
   }
   if (req.method === 'GET') {
+    const { currentUrl } = req.query
     let redis = new Redis(
-      'redis://:c24c148968a94037bcd9c29ded967a17@eu1-capital-sparrow-31880.upstash.io:31880'
+      'redis://:cd9325e584e94ca2bc669cadc9bee755@eu1-alive-pipefish-31892.upstash.io:31892'
     )
-    const comments = await redis.lrange('/notes/huso', 0, -1)
+    const comments = await redis.lrange(`${currentUrl}`, 0, -1)
     redis.quit()
     const data = comments.map((v) => JSON.parse(v))
     res.status(200).json(data)
