@@ -30,6 +30,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
   ],
+  serverMiddleware: [{ path: '/api/comment', handler: '~/api/comment.js' }],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -63,5 +64,8 @@ export default {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
     authdomain: process.env.authdomain || 'dev-03z1b31t.eu.auth0.com',
     authclient: process.env.authclient || 'YBR6Ej8LfEwxJYkKvJq4uhilB2TxrgVF',
+    redis:
+      process.env.NUXT_ENV_Redis ||
+      'redis://:c24c148968a94037bcd9c29ded967a17@eu1-capital-sparrow-31880.upstash.io:31880',
   },
 }
