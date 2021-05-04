@@ -27,7 +27,7 @@ export default {
   props:{
     comments:{
       type:Array,
-      required:true
+      required:false
     }
   },
   methods:{
