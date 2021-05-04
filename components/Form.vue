@@ -1,7 +1,7 @@
 <template>
   <div>
     <form class="space-y-4">
-      <textarea rows="3" class="w-full bg-gray-100 border rounded px-2 py-1" v-model="currentCommit"> </textarea>
+      <textarea rows="3" class="w-full bg-gray-100 border border-gray-800  dark:border-gray-500  rounded px-2 py-1 dark:bg-gray-800" v-model="currentCommit"> </textarea>
 
       <div v-if="!$auth.loading" class="flex items-center space-x-4">
         <!--İf user login-->
