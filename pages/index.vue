@@ -50,7 +50,7 @@
     <div
       class="bottom-8 right-4 fixed flex justify-center items-center flex-col md:block hidden text-center"
     >
-      <arrow-down fill="white" /> Scroll <br />
+      <arrow-down fill="white" class="animate-bounce"/> Scroll <br />
       Down
     </div>
   </div>
