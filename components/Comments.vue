@@ -1,7 +1,7 @@
 <template>
   <div>
     <ol>
-      <li v-for="comment in comments" class="w-full py-3 flex" :key="comment.id">
+      <li v-for="comment in comments" class="w-full py-3 flex w-full" :key="comment.id">
         <!-- user-->
         <img :src="comment.user.picture" :alt="comment.user.name" class="rounded-full w-10 h-10 flex-shrink-0">
 
@@ -14,6 +14,7 @@
           </div>
           <p>{{comment.text}}</p>
         </div>
+        <button class="ml-auto" v-if="userValidator && $auth.isAuthenticated" @click.prevent="deleteComments(comment.id)"><IconDelete class="w-8 h-8"/></button>
       </li>
     </ol>
   </div>
@@ -21,14 +22,25 @@
 
 <script>
 import { DateTime } from "luxon";
-
+import IconDelete from '../assets/icons/trash.svg'
 export default {
   name:'Comments',
   props:{
     comments:{
       type:Array,
       required:false
+    },
+    deleteComments:{
+      type:Function,
+      required: false
+    },
+    userValidator:{
+      type:Function,
+      required:true
     }
+  },
+  components:{
+    IconDelete
   },
   methods:{
     formatDate(date){

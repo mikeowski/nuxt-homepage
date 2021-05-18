@@ -68,4 +68,5 @@ export default {
       process.env.NUXT_ENV_Redis ||
       'redis://:c24c148968a94037bcd9c29ded967a17@eu1-capital-sparrow-31880.upstash.io:31880',
   },
+  adminId: process.env.Admin_ID || 'wK20754dll8ev3SBmG8R6fYdUAv02nTd',
 }

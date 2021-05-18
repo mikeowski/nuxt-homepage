@@ -7,7 +7,7 @@
         <!--İf user login-->
         <div v-if="$auth.isAuthenticated" class="flex items-center space-x-2">
           <button class="bg-blue-700 rounded px-2 py-1 text-white" @click.prevent="onsubmit">Send</button>
-          <img :src="$auth.user.picture" class="rounded-full h-12" />
+          <img :src="$auth.user.picture" class="rounded-full h-12" :alt="$auth.user.name"/>
           <h2>{{ $auth.user.name }}</h2>
         </div>
 
@@ -29,13 +29,12 @@
         </button>
       </div>
       <!--Comments-->
-     <Comments :comments="comments"/>
+     <Comments :comments="comments" :delete-comments="deleteComment" :user-validator="userValidator"/>
     </form>
   </div>
 </template>
 
 <script>
-import {  DateTime } from 'luxon'
 import Comments from "./Comments";
 export default {
   name:'Form',
@@ -63,6 +62,7 @@ export default {
     //send Commit to the redis
     async onsubmit(){
       const userToken = await this.$auth.getTokenSilently()
+
       const text =  this.currentCommit
       const url = process.env.baseUrl + this.$route.fullPath
       const getUser = await fetch(`https://${process.env.authdomain}/userinfo`,{
@@ -93,6 +93,21 @@ export default {
         method:'GET'
       })
       this.comments = await response.json()
+    },
+    async deleteComment(id){
+      const currentUrl = process.env.baseUrl + this.$route.fullPath
+      const query = new URLSearchParams({currentUrl,id})
+      const url = `/api/comment?${query}`
+      await fetch(url,{
+        method:'DELETE'
+      })
+      console.log(this.$auth.user)
+      this.fetchComments()
+    },
+   async userValidator(){
+      const currentUserToken = await this.$auth.getTokenSilently()
+     console.log(currentUserToken === process.env.adminId)
+      return currentUserToken === process.env.adminId
     }
   }
 

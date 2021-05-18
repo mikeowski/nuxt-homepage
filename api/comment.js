@@ -50,5 +50,23 @@ app.all('/', async function (req, res) {
     const data = comments.map((v) => JSON.parse(v))
     res.status(200).json(data)
   }
+  if (req.method === 'DELETE') {
+    const { currentUrl, id } = req.query
+    let redis = new Redis(
+      'redis://:cd9325e584e94ca2bc669cadc9bee755@eu1-alive-pipefish-31892.upstash.io:31892'
+    )
+    const comments = await redis.lrange(`${currentUrl}`, 0, -1)
+    const data = comments.map((v) => JSON.parse(v))
+    const deletedComment = data.find((comment) => {
+      return comment.id == `${id}`
+    })
+    console.log(JSON.stringify(deletedComment))
+    const del = await redis.lrem(
+      `${currentUrl}`,
+      0,
+      JSON.stringify(deletedComment)
+    )
+    res.status(200).json(del)
+  }
 })
 export default app
