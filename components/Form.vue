@@ -29,7 +29,7 @@
         </button>
       </div>
       <!--Comments-->
-     <Comments :comments="comments" :delete-comments="deleteComment" :user-validator="userValidator"/>
+     <Comments :comments="comments" :delete-comments="deleteComment" :userValidator="userValidator"/>
     </form>
   </div>
 </template>
@@ -104,10 +104,9 @@ export default {
       console.log(this.$auth.user)
       this.fetchComments()
     },
-   async userValidator(){
-      const currentUserToken = await this.$auth.getTokenSilently()
-     console.log(currentUserToken === process.env.adminId)
-      return currentUserToken === process.env.adminId
+     userValidator(){
+      const userToken =  this.$auth.user.sub
+      return userToken === process.env.adminId && this.$auth.isAuthenticated
     }
   }
 

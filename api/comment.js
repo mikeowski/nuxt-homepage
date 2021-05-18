@@ -15,7 +15,6 @@ app.use(bp.json())
 app.all('/', async function (req, res) {
   if (req.method === 'POST') {
     const { text, url, user } = req.body
-    console.log(text, url, user)
 
     if (!text || !url || !user) {
       return errorResponse(res, Boom.badData('Parametreler eksik'))
@@ -60,7 +59,6 @@ app.all('/', async function (req, res) {
     const deletedComment = data.find((comment) => {
       return comment.id == `${id}`
     })
-    console.log(JSON.stringify(deletedComment))
     const del = await redis.lrem(
       `${currentUrl}`,
       0,
