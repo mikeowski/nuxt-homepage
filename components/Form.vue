@@ -101,12 +101,14 @@ export default {
       await fetch(url,{
         method:'DELETE'
       })
-      console.log(this.$auth.user)
       this.fetchComments()
     },
      userValidator(){
-      const userToken =  this.$auth.user.sub
-      return userToken === process.env.adminId && this.$auth.isAuthenticated
+      if(this.$auth.isAuthenticated){
+        const userToken =  this.$auth.user.sub
+        return userToken === process.env.adminId
+      }
+     return false
     }
   }
 
