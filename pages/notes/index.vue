@@ -1,9 +1,15 @@
 <template>
   <div class="sc space-y-20 pb-4">
    <div class="space-y-4">
-     <h1 class="text-2xl font-medium text-highlight">
-       Kendime Notlar
-     </h1>
+     <typical
+       class="text-2xl font-medium text-highlight"
+       :steps="[
+              '{',
+              500,
+              '{ Notlar }',
+            ]"
+       :wrapper="'h1'"
+     ></typical>
      <p>
        Bu sayfada yazılım tricklerini ve öğrengiğim yeni teknolojileri paylaşıcağım
      </p>
@@ -27,8 +33,12 @@
 </template>
 
 <script>
+import typical from 'vue-typical'
 export default {
   name: 'Blog',
+  components:{
+    typical,
+  },
   async asyncData({ $content, params }) {
     let articles = await $content('articles', params.slug).fetch()
     articles = articles.sort((a, b) => {

@@ -2,17 +2,17 @@
   <div>
     <router-link
       :to="path"
-      class="nav-link nav-link-ltr text-xl font-serif"
+      class="nav-link nav-link-ltr"
       :class="
           $route.path === path
             ? 'text-gray-900 dark:text-gray-200'
             : 'text-gray-600 dark:text-gray-400'
         "
     >
-      <a>{{name}}</a>
+      <a class="text-xl font-bold font-serif">{{name}}</a>
       <hr
         v-if="$route.path === path"
-        class="absolute bottom-0 border-b-2 border-red-700 w-full"
+        class="absolute bottom-0 border-b-2 border-green-500 w-full"
       />
     </router-link>
   </div>

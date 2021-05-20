@@ -12,6 +12,9 @@ module.exports = {
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
+      boxShadow: {
+        bookmark_dark: 'inset 0 4px 8px 0 rgba(31, 41, 55,0.08)',
+      },
       colors: {
         gray: colors.gray,
         svgSpecial: '#1B1D1C',
