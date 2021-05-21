@@ -94,12 +94,16 @@ export default {
       })
       this.comments = await response.json()
     },
-    async deleteComment(id){
+    async deleteComment(comment){
+      console.log(comment)
       const currentUrl = process.env.baseUrl + this.$route.fullPath
-      const query = new URLSearchParams({currentUrl,id})
-      const url = `/api/comment?${query}`
+      const url = `/api/comment`
       await fetch(url,{
-        method:'DELETE'
+        method:'DELETE',
+        body: JSON.stringify({currentUrl, comment}),
+        headers: {
+          'Content-Type': 'application/json',
+        },
       })
       this.fetchComments()
     },

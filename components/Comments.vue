@@ -14,7 +14,7 @@
           </div>
           <p>{{comment.text}}</p>
         </div>
-        <button class="ml-auto" v-if="userValidator()" @click.prevent="deleteComments(comment.id)">
+        <button class="ml-auto" v-if="userValidator()" @click.prevent="deleteComments(comment)">
           <IconDelete class="w-8 h-8"/>
         </button>
       </li>

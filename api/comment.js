@@ -28,43 +28,54 @@ app.all('/', async function (req, res) {
         picture: user.picture,
       },
     }
-    res.status(200).json(comment)
-    //redis connection
-    let redis = new Redis(
-      'redis://:cd9325e584e94ca2bc669cadc9bee755@eu1-alive-pipefish-31892.upstash.io:31892'
-    )
-    //redis write
-    redis.lpush(url, JSON.stringify(comment))
-    //redis quit
-    redis.quit()
-    //response
+    try {
+      //redis connection
+      let redis = new Redis(
+        'redis://:cd9325e584e94ca2bc669cadc9bee755@eu1-alive-pipefish-31892.upstash.io:31892'
+      )
+      //redis write
+      redis.lpush(url, JSON.stringify(comment))
+      //redis quit
+      redis.quit()
+      //response
+      return res.status(200).json(comment)
+    } catch (_) {
+      return res.status(400).json({ message: 'Unexpected error occurred.' })
+    }
   }
   if (req.method === 'GET') {
     const { currentUrl } = req.query
+    if (!currentUrl) {
+      return errorResponse(res, Boom.badData('Missing parameters'))
+    }
     let redis = new Redis(
       'redis://:cd9325e584e94ca2bc669cadc9bee755@eu1-alive-pipefish-31892.upstash.io:31892'
     )
-    const comments = await redis.lrange(`${currentUrl}`, 0, -1)
-    redis.quit()
-    const data = comments.map((v) => JSON.parse(v))
-    res.status(200).json(data)
+    try {
+      const comments = await redis.lrange(`${currentUrl}`, 0, -1)
+      redis.quit()
+      const data = comments.map((v) => JSON.parse(v))
+      res.status(200).json(data)
+    } catch (err) {
+      return res.status(400).json({ message: 'Unexpected error occurred.' })
+    }
   }
+
   if (req.method === 'DELETE') {
-    const { currentUrl, id } = req.query
+    const { currentUrl, comment } = req.body
+    if ((!currentUrl, !comment)) {
+      return errorResponse(res, Boom.badData('Missing parameters'))
+    }
     let redis = new Redis(
       'redis://:cd9325e584e94ca2bc669cadc9bee755@eu1-alive-pipefish-31892.upstash.io:31892'
     )
-    const comments = await redis.lrange(`${currentUrl}`, 0, -1)
-    const data = comments.map((v) => JSON.parse(v))
-    const deletedComment = data.find((comment) => {
-      return comment.id == `${id}`
-    })
-    const del = await redis.lrem(
-      `${currentUrl}`,
-      0,
-      JSON.stringify(deletedComment)
-    )
-    res.status(200).json(del)
+    try {
+      await redis.lrem(currentUrl, 0, JSON.stringify(comment))
+      res.status(200).json()
+      redis.quit()
+    } catch (err) {
+      return res.status(400).json({ message: 'Unexpected error occurred.' })
+    }
   }
 })
 export default app
