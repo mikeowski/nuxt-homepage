@@ -1,25 +1,22 @@
 {
   "version": 2,
+  "routes":[
+  {
+  "src":"/api/comment",
+  "dest":"/api/comment.js"
+  }]
   "builds": [
+  {
+        "src": "api/**/*.js",
+        "use": "@vercel/node"
+      },
     {
       "src": "nuxt.config.js",
       "use": "@nuxtjs/vercel-builder",
       "config": {
         "serverFiles": ["api/**"]
       }
-    },
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
     }
   ],
-  "routes": [
-    {
-      "src": "/api/comment/)",
-      "dest": "/api/comment.js",
-      "methods": ["GET", "DELETE","POST"],
 
-    }
-
-  ]
 }
