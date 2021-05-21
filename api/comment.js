@@ -55,7 +55,7 @@ app.all('/', async function (req, res) {
       const comments = await redis.lrange(`${currentUrl}`, 0, -1)
       redis.quit()
       const data = comments.map((v) => JSON.parse(v))
-      res.status(200).json(data)
+      return res.status(200).json(data)
     } catch (err) {
       return res.status(400).json({ message: 'Unexpected error occurred.' })
     }
@@ -71,8 +71,8 @@ app.all('/', async function (req, res) {
     )
     try {
       await redis.lrem(currentUrl, 0, JSON.stringify(comment))
-      res.status(200).json()
       redis.quit()
+      return res.status(200).json()
     } catch (err) {
       return res.status(400).json({ message: 'Unexpected error occurred.' })
     }
