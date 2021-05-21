@@ -11,7 +11,7 @@
        :wrapper="'h1'"
      ></typical>
      <p>
-       Bu sayfada yazılım tricklerini ve öğrengiğim yeni teknolojileri paylaşıcağım
+       Bu sayfada yazılım tricklerini ve öğrendiğim yeni teknolojileri paylaşıcağım
      </p>
    </div>
 
