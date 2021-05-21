@@ -15,10 +15,6 @@
     <div class="pt-10 space-y-4">
       <div v-for="bookmark in bookmarks" :key="bookmark._id" class="flex space-x-2 hover:shadow-xl p-4 border-2 border-gray-100 dark:border-gray-800 rounded">
         <a :href="bookmark.link" class="flex space-x-4">
-        <span class="backdrop-grayscale">
-           <img :src="bookmark.cover" alt="bookmark._id" class="w-24">
-        </span>
-
         <div>
           <h1 class="text-xl text-highlight">{{bookmark.title}}</h1>
           <p>{{bookmark.domain}}・{{formatDate(bookmark.created)}}</p>
