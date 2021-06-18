@@ -1,6 +1,6 @@
 <template>
   <div id="Projects">
-    <div  class="flex flex-wrap justify-center gap-4 sc-large">
+    <div  class="flex justify-center gap-4 sc-large">
       <ProjectContainer
         class="Project-container"
         :src="'quastionaire'"
@@ -8,6 +8,7 @@
         :href="'https://quastionaire.vercel.app/'"
       />
       <ProjectContainer  class="Project-container" :name="'Personal website'" :src="'personal_website'" />
+      <ProjectContainer  class="Project-container" :name="'Nuxt with Notion API'" :src="'notion-blog-example'"/>
     </div>
   </div>
 </template>
@@ -31,7 +32,7 @@ export default {
        scrollTrigger:{
          trigger:'#Projects',
          start:'top 90%',
-         end:'bottom 80%',
+         end:'bottom 50%',
          scrub:2,
        },
      })

@@ -1,5 +1,5 @@
 <template>
-  <div id="Project-container" class="md:w-2/5 w-full flex relative flex-grow">
+  <div id="Project-container" class="md:w-2/5 w-full flex relative flex-grow border-2">
     <a :href="href">
       <div class="img">
         <img
@@ -10,7 +10,7 @@
           height="100%"
         />
         <h1
-          class="font-extrabold text-white text-2xl z-30 absolute bottom-10 right-16"
+          class="font-extrabold text-green-600 text-2xl z-30 absolute bottom-5 right-8"
         >
           {{ name }}
         </h1>
