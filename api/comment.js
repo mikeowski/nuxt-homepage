@@ -29,15 +29,15 @@ app.all('/', async function (req, res) {
       },
     }
     try {
-      //redis connection
-      let redis = new Redis(
+      // redis connection
+      const redis = new Redis(
         'redis://:cd9325e584e94ca2bc669cadc9bee755@eu1-alive-pipefish-31892.upstash.io:31892'
       )
-      //redis write
+      // redis write
       redis.lpush(url, JSON.stringify(comment))
-      //redis quit
+      // redis quit
       redis.quit()
-      //response
+      // response
       return res.status(200).json(comment)
     } catch (_) {
       return res.status(400).json({ message: 'Unexpected error occurred.' })
@@ -48,7 +48,7 @@ app.all('/', async function (req, res) {
     if (!currentUrl) {
       return errorResponse(res, Boom.badData('Missing parameters'))
     }
-    let redis = new Redis(
+    const redis = new Redis(
       'redis://:cd9325e584e94ca2bc669cadc9bee755@eu1-alive-pipefish-31892.upstash.io:31892'
     )
     try {
@@ -66,7 +66,7 @@ app.all('/', async function (req, res) {
     if ((!currentUrl, !comment)) {
       return errorResponse(res, Boom.badData('Missing parameters'))
     }
-    let redis = new Redis(
+    const redis = new Redis(
       'redis://:cd9325e584e94ca2bc669cadc9bee755@eu1-alive-pipefish-31892.upstash.io:31892'
     )
     try {

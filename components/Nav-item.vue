@@ -4,12 +4,12 @@
       :to="path"
       class="nav-link nav-link-ltr"
       :class="
-          $route.path === path
-            ? 'text-gray-900 dark:text-gray-200'
-            : 'text-gray-600 dark:text-gray-400'
-        "
+        $route.path === path
+          ? 'text-gray-900 dark:text-gray-200'
+          : 'text-gray-600 dark:text-gray-400'
+      "
     >
-      <a class="text-xl font-bold font-serif">{{name}}</a>
+      <a class="text-xl font-bold font-serif">{{ name }}</a>
       <hr
         v-if="$route.path === path"
         class="absolute bottom-0 border-b-2 border-green-500 w-full"
@@ -20,18 +20,18 @@
 
 <script>
 export default {
-  name: 'Nav-item',
-  props:{
-    path:{
+  name: 'NavItem',
+  props: {
+    path: {
       type: String,
       required: true,
     },
-    name:{
+    name: {
       type: String,
       required: true,
-    }
-  }
-};
+    },
+  },
+}
 </script>
 
 <style scoped>

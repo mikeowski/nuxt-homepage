@@ -1,6 +1,5 @@
 <template>
   <div class="relative pt-8">
-
     <div class="sc space-y-4 pb-8">
       <div>
         <h1 class="text-6xl uppercase text-highlight">{{ article.title }}</h1>
@@ -16,13 +15,13 @@
           class="prose lg:prose-lg dark:prose-dark"
         />
       </div>
-    <Form/>
+      <Form />
     </div>
   </div>
 </template>
 
 <script>
-import Form from "../../components/Form";
+import Form from '../../components/Form'
 export default {
   components: { Form },
   async asyncData({ $content, params }) {

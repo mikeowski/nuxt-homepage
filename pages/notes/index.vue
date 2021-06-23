@@ -1,31 +1,27 @@
 <template>
   <div class="sc space-y-20 pb-4">
-   <div class="space-y-4">
-     <typical
-       class="text-2xl font-medium text-highlight"
-       :steps="[
-              '{',
-              500,
-              '{ Notlar }',
-            ]"
-       :wrapper="'h1'"
-     ></typical>
-     <p>
-       Bu sayfada yazılım tricklerini ve öğrendiğim yeni teknolojileri paylaşıcağım
-     </p>
-   </div>
+    <div class="space-y-4">
+      <typical
+        class="text-2xl font-medium text-highlight"
+        :steps="['{', 500, '{ Notlar }']"
+        :wrapper="'h1'"
+      ></typical>
+      <p>
+        Bu sayfada yazılım tricklerini ve öğrendiğim yeni teknolojileri
+        paylaşıcağım
+      </p>
+    </div>
 
     <ul class="space-y-8">
-      <li v-for="article of articles" :key="article.slug" >
-
+      <li v-for="article of articles" :key="article.slug">
         <nuxt-link :to="`/notes/${article.slug}`">
           <h2 class="text-xl font-bold underline hover:text-green-700">
-            {{article.title.toUpperCase()}}
-           <!-- <hr class="w-full border-gray-600 dark:border-gray-400"/> -->
+            {{ article.title.toUpperCase() }}
+            <!-- <hr class="w-full border-gray-600 dark:border-gray-400"/> -->
           </h2>
 
-          <p class="font-light text-lg">{{article.description}}</p>
-          <p class="text-sm py-2">{{formatDate(article.created)}}</p>
+          <p class="font-light text-lg">{{ article.description }}</p>
+          <p class="text-sm py-2">{{ formatDate(article.created) }}</p>
         </nuxt-link>
       </li>
     </ul>
@@ -36,7 +32,7 @@
 import typical from 'vue-typical'
 export default {
   name: 'Blog',
-  components:{
+  components: {
     typical,
   },
   async asyncData({ $content, params }) {
@@ -49,12 +45,16 @@ export default {
   methods: {
     formatDate(date) {
       console.log(date)
-      const options = { year: 'numeric', month: 'long', day: 'numeric',hour:'numeric',minute:'numeric' }
+      const options = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+      }
       return new Date(date).toLocaleDateString('tr', options)
-    }
-  }
-
-
+    },
+  },
 }
 </script>
 

@@ -24,11 +24,11 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import IconTwitter from '../assets/icons/twitter.svg'
 import IconInstagram from '../assets/icons/instagram.svg'
 import IconGithub from '../assets/icons/github.svg'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 export default {
   name: 'Social',
   components: {

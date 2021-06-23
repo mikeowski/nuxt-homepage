@@ -32,6 +32,8 @@
 </template>
 
 <script>
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import IconJs from '../assets/icons/logo-javascript.svg'
 import IconNode from '../assets/icons/node-dot-js.svg'
 import IconCss from '../assets/icons/css3.svg'
@@ -40,8 +42,6 @@ import IconFigma from '../assets/icons/figma.svg'
 import IconNuxt from '../assets/icons/nuxt-dot-js.svg'
 import IconTailwind from '../assets/icons/tailwindcss.svg'
 import TechnologiesContainer from './technologies-container'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 export default {
   name: 'Technologies',
   components: {
@@ -78,7 +78,7 @@ export default {
           end: '60% center',
           scrub: 1,
         },
-        y:300,
+        y: 300,
         opacity: 0,
         delay: 1,
         stagger: 0.6,

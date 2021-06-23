@@ -22,7 +22,7 @@
         <div class="pt-32">
           <p class="font-bold text-xl text-center description opacity-0">
             Merhaba ben Burak Mike 20 yaşında, <br />developer ve aynı zamanda
-            Akdeniz Üniversitesi'nde öğrenciyim.<br/>
+            Akdeniz Üniversitesi'nde öğrenciyim.<br />
             <br />Front-end teknolojileri ve tasarım araçları gibi konularla
             <br />yakından ilgileniyorum.<br />
             Kendimce geliştirdiğim Projelerime Github adresimden
@@ -35,7 +35,7 @@
       </div>
     </div>
     <!--Technologies I'm interested in-->
-    <div class="h-screen sc flex  items-center justify-center technologies">
+    <div class="h-screen sc flex items-center justify-center technologies">
       <Technologies class="w-full" />
     </div>
     <!-- My Projects-->
@@ -44,13 +44,13 @@
     >
       <div>
         <h1 class="text-center font-bold text-4xl mb-4">Projeler</h1>
-        <Projects/>
+        <Projects />
       </div>
     </div>
     <div
       class="bottom-8 right-4 fixed flex justify-center items-center flex-col md:block hidden text-center"
     >
-      <arrow-down fill="white" class="animate-bounce"/> Scroll <br />
+      <arrow-down fill="white" class="animate-bounce" /> Scroll <br />
       Down
     </div>
   </div>
@@ -58,13 +58,13 @@
 
 <script>
 import typical from 'vue-typical'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import ProjectContainer from '../components/Project-container'
 import Technologies from '../components/Technologies'
 import arrowDown from '../assets/icons/arrow-down.svg'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import Social from '../components/Social'
-import Projects from "../components/Projects";
+import Projects from '../components/Projects'
 
 export default {
   name: 'Home',
@@ -87,23 +87,26 @@ export default {
           trigger: '.starter',
           start: '200px top',
           toggleActions: 'restart pause resume reverse',
-          //markers:true
+          // markers:true
         },
       })
-      gsap.to('.description',{ scrollTrigger: {
+      gsap.to('.description', {
+        scrollTrigger: {
           trigger: '.starter',
           start: '200px top',
           toggleActions: 'restart pause resume reverse',
-          //markers:true
-        },opacity:1})
+          // markers:true
+        },
+        opacity: 1,
+      })
       tl.from('.description', {
         ease: 'power1',
-        stagger:0.3,
+        stagger: 0.3,
         y: 200,
       }).to('.social-container', {
-        opacity:1,
-        stagger:0.2,
-        ease:'power1',
+        opacity: 1,
+        stagger: 0.2,
+        ease: 'power1',
       })
     },
   },
