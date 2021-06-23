@@ -47,6 +47,7 @@
         :comments="comments"
         :delete-comments="deleteComment"
         :user-validator="userValidator"
+        :is-loading="isLoading"
       />
     </form>
   </div>
@@ -61,6 +62,7 @@ export default {
     return {
       currentCommit: '',
       comments: null,
+      isLoading: true,
     }
   },
   mounted() {
@@ -113,6 +115,7 @@ export default {
         method: 'GET',
       })
       this.comments = await response.json()
+      this.isLoading = false
     },
     async deleteComment(comment) {
       console.log(comment)

@@ -11,7 +11,8 @@
         linkler
       </p>
     </div>
-    <div class="pt-10 space-y-4">
+    <Loading :is-loading="isLoading" />
+    <div v-if="!isLoading" class="pt-10 space-y-4">
       <div
         v-for="bookmark in bookmarks"
         :key="bookmark._id"
@@ -31,16 +32,18 @@
 <script>
 import { DateTime } from 'luxon'
 import typical from 'vue-typical'
+import Loading from '../components/Loading'
 import { getBookmarks } from '../lib/raindrop'
 export default {
   name: 'Bookmarks',
-
   components: {
     typical,
+    Loading,
   },
   data() {
     return {
       bookmarks: null,
+      isLoading: true,
     }
   },
   created() {
@@ -49,6 +52,7 @@ export default {
   methods: {
     async getBookmarks() {
       this.bookmarks = await getBookmarks()
+      this.isLoading = false
     },
     formatDate(date) {
       return DateTime.fromISO(date).toRelative()

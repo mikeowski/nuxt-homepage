@@ -1,6 +1,7 @@
 <template>
   <div>
-    <ol>
+    <Loading :is-loading="isLoading" />
+    <ol v-if="!isLoading">
       <li
         v-for="comment in comments"
         :key="comment.id"
@@ -40,9 +41,11 @@
 <script>
 import { DateTime } from 'luxon'
 import IconDelete from '../assets/icons/trash.svg'
+import Loading from './Loading'
 export default {
   name: 'Comments',
   components: {
+    Loading,
     IconDelete,
   },
   props: {
@@ -56,6 +59,10 @@ export default {
     },
     userValidator: {
       type: Function,
+      required: true,
+    },
+    isLoading: {
+      type: Boolean,
       required: true,
     },
   },
