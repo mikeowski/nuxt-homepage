@@ -44,7 +44,6 @@ export default {
   },
   methods: {
     formatDate(date) {
-      console.log(date)
       const options = {
         year: 'numeric',
         month: 'long',
