@@ -118,7 +118,6 @@ export default {
       this.isLoading = false
     },
     async deleteComment(comment) {
-      console.log(comment)
       const currentUrl = process.env.baseUrl + this.$route.fullPath
       const url = `/api/comment`
       await fetch(url, {
