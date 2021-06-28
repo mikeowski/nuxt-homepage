@@ -86,7 +86,7 @@ export default {
       const text = this.currentCommit
       const url = process.env.baseUrl + this.$route.fullPath
       const getUser = await fetch(
-        `https://${process.env.authdomain}/userinfo`,
+        `https://${process.env.NUXT_ENV_AUTH_DOMAIN}/userinfo`,
         {
           headers: {
             'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ export default {
     userValidator() {
       if (this.$auth.isAuthenticated) {
         const userToken = this.$auth.user.sub
-        return userToken === process.env.adminId
+        return userToken === process.env.NUXT_ENV_ADMINID
       }
       return false
     },

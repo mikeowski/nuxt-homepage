@@ -30,9 +30,7 @@ app.all('/', async function (req, res) {
     }
     try {
       // redis connection
-      const redis = new Redis(
-        'redis://:cd9325e584e94ca2bc669cadc9bee755@eu1-alive-pipefish-31892.upstash.io:31892'
-      )
+      const redis = new Redis(process.env.NUXT_ENV_REDIS)
       // redis write
       redis.lpush(url, JSON.stringify(comment))
       // redis quit
@@ -48,9 +46,9 @@ app.all('/', async function (req, res) {
     if (!currentUrl) {
       return errorResponse(res, Boom.badData('Missing parameters'))
     }
-    const redis = new Redis(
-      'redis://:cd9325e584e94ca2bc669cadc9bee755@eu1-alive-pipefish-31892.upstash.io:31892'
-    )
+
+    const redis = new Redis(process.env.NUXT_ENV_REDIS)
+
     try {
       const comments = await redis.lrange(`${currentUrl}`, 0, -1)
       redis.quit()
@@ -66,9 +64,9 @@ app.all('/', async function (req, res) {
     if ((!currentUrl, !comment)) {
       return errorResponse(res, Boom.badData('Missing parameters'))
     }
-    const redis = new Redis(
-      'redis://:cd9325e584e94ca2bc669cadc9bee755@eu1-alive-pipefish-31892.upstash.io:31892'
-    )
+
+    const redis = new Redis(process.env.NUXT_ENV_REDIS)
+
     try {
       await redis.lrem(currentUrl, 0, JSON.stringify(comment))
       redis.quit()

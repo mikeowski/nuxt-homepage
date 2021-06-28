@@ -1,3 +1,4 @@
+require('dotenv').config()
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -38,6 +39,7 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/dotenv',
     'nuxt-svg-loader',
   ],
 
@@ -62,11 +64,5 @@ export default {
   build: {},
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
-    authdomain: process.env.authdomain || 'dev-03z1b31t.eu.auth0.com',
-    authclient: process.env.authclient || 'YBR6Ej8LfEwxJYkKvJq4uhilB2TxrgVF',
-    redis:
-      process.env.NUXT_ENV_Redis ||
-      'redis://:c24c148968a94037bcd9c29ded967a17@eu1-capital-sparrow-31880.upstash.io:31880',
-    adminId: process.env.Admin_ID || 'google-oauth2|113608227412618946130',
   },
 }
