@@ -16,6 +16,7 @@
         class="Project-container"
         :name="'Nuxt with Notion API'"
         :src="'notion-blog-example'"
+        :href="'https://notion-nuxt.herokuapp.com'"
       />
     </div>
   </div>
