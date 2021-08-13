@@ -3,7 +3,7 @@ import createAuth0Client from '@auth0/auth0-spa-js'
 
 /** Define a default action to perform after authentication */
 const DEFAULT_REDIRECT_CALLBACK = () =>
-  window.history.replaceState({}, document.title, window.location.pathname)
+  window.history.replaceState({},process.env.baseUrl)
 
 let instance
 
