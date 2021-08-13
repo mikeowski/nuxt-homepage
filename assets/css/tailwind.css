@@ -3,11 +3,11 @@
 @tailwind utilities;
 @layer base {
   @font-face {
-    font-family: "Inter";
+    font-family: 'Inter';
     font-weight: 100 900;
     font-display: swap;
     font-style: normal;
-    src: url("assets/fonts/Inter-roman.var.woff2?v=3.15") format("woff2");
+    src: url('assets/fonts/Inter-roman.var.woff2?v=3.15') format('woff2');
   }
   html {
     scroll-behavior: smooth;
@@ -32,9 +32,9 @@
     dark:bg-gray-900 dark:text-gray-400;
   }
   ::selection {
-    @apply
-    bg-green-300 text-gray-600
-    dark:bg-green-500 dark:text-gray-100}
+    @apply bg-green-300 text-gray-600
+    dark:bg-green-500 dark:text-gray-100;
+  }
   .sc {
     @apply max-w-screen-md mx-auto px-4;
   }
@@ -43,23 +43,22 @@
   }
 
   .svg-container {
-    @apply
-    w-1/5
+    @apply w-1/5
     md:w-1/4
     p-4
     bg-svgSpecial
     font-medium text-gray-50 text-sm dark:text-gray-300
     border-2 border-white  border-solid rounded-xl dark:border-gray-900
     flex flex-col
-    dark:bg-svgSpecial_dark dark:bg-opacity-50
+    dark:bg-svgSpecial_dark dark:bg-opacity-50;
   }
   .text-highlight {
     @apply text-gray-900
     dark:text-gray-50;
   }
-  .social-container{
+  .social-container {
     @apply flex items-center justify-center bg-gray-200 text-gray-600 rounded-full transition-colors
     hover:bg-opacity-75
-    dark:bg-gray-700 dark:text-gray-300 p-3
+    dark:bg-gray-700 dark:text-gray-300 p-3;
   }
 }
