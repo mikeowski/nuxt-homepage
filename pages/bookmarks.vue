@@ -12,7 +12,7 @@
       </p>
     </div>
     <Loading :is-loading="isLoading" />
-    <div v-if="!isLoading" class="pt-10 space-y-4">
+    <div v-if="!isLoading" class="pt-10 space-y-4 pb-4">
       <div
         v-for="bookmark in bookmarks"
         :key="bookmark._id"
