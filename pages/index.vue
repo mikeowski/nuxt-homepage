@@ -21,7 +21,7 @@
         <!--Description-->
         <div class="pt-32">
           <p class="font-bold text-xl text-center description opacity-0">
-            Merhaba ben Burak Mike 20 yaşında, <br />developer ve aynı zamanda
+            Merhaba ben Burak Mike {{ ageCalculator() }} yaşında, <br />developer ve aynı zamanda
             Akdeniz Üniversitesi'nde öğrenciyim.<br />
             <br />Front-end teknolojileri ve tasarım araçları gibi konularla
             <br />yakından ilgileniyorum.<br />
@@ -59,6 +59,7 @@
 <script>
 import typical from 'vue-typical'
 import { gsap } from 'gsap'
+import { DateTime} from 'luxon'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import ProjectContainer from '../components/Project-container'
 import Technologies from '../components/Technologies'
@@ -109,6 +110,12 @@ export default {
         ease: 'power1',
       })
     },
+    ageCalculator(){
+      const currentDate = DateTime.now()
+      const birthday = DateTime.fromISO('2000-11-01')
+      const age = parseInt(currentDate.diff(birthday,'days').toObject().days / 365)
+      return age
+    }
   },
 }
 </script>
