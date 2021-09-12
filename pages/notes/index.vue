@@ -2,7 +2,7 @@
   <div class="sc space-y-20 pb-4">
     <div class="space-y-4">
       <typical
-        class="text-2xl font-medium text-highlight"
+        class="text-2xl font-medium text-highlight text-center md:text-left"
         :steps="['{', 500, '{ Notlar }']"
         :wrapper="'h1'"
       ></typical>

@@ -2,7 +2,7 @@
   <div class="sc">
     <div class="space-y-4">
       <typical
-        class="text-2xl font-medium text-highlight"
+        class="text-2xl font-medium text-highlight text-center md:text-left"
         :steps="['{', 500, '{ Dikkatimi Çekenler }']"
         :wrapper="'h1'"
       ></typical>
