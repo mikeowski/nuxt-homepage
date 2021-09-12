@@ -1,6 +1,6 @@
 <template>
   <div class="sc">
-    <div class="space-y-4">
+    <div class="space-y-4 text-center md:text-left">
       <typical
         class="text-2xl font-medium text-highlight text-center md:text-left"
         :steps="['{', 500, '{ Dikkatimi Çekenler }']"
