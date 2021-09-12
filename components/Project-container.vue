@@ -13,7 +13,7 @@
           height="100%"
         />
         <h1
-          class="font-extrabold text-green-600 text-2xl z-30 text-center absolute bottom-3 right-5"
+          class="font-extrabold text-green-600 text-2xl z-30 text-center absolute bottom-10 right-5"
         >
           {{ name }}
         </h1>

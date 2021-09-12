@@ -1,6 +1,6 @@
 <template>
   <div id="Projects">
-    <div class="flex flex-col md:flex-row justify-center gap-4 sc-large">
+    <div class="flex flex-col flex-wrap md:flex-row justify-center gap-4 sc-large mb-12">
       <ProjectContainer
         class="Project-container"
         :src="'quastionaire'"
@@ -17,6 +17,11 @@
         :name="'Nuxt with Notion API'"
         :src="'notion-blog-example'"
         :href="'https://notion-nuxt.herokuapp.com'"
+      />
+      <ProjectContainer
+        class="Project-container"
+        :name="'Recipe'"
+        :src="'recipe'"
       />
     </div>
   </div>
@@ -40,18 +45,12 @@ export default {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: '#Projects',
-          start: 'top 90%',
-          end: 'bottom 50%',
+          start: 'top 100%',
+          end: 'bottom 80%',
           scrub: 2,
         },
       })
-      tl.from('.Project-container', {
-        delay: 1,
-        stagger: 0.6,
-        duration: 2,
-        opacity: 0,
-        ease: 'power2.easeInOut',
-      }).from('.Project-container h1', {
+      tl.from('.Project-container h1', {
         scrollTrigger: {
           trigger: '#Projects',
           start: 'top 90%',
