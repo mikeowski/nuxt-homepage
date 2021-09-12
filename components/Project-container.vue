@@ -1,7 +1,7 @@
 <template>
   <div
     id="Project-container"
-    class="md:w-2/5 w-full flex relative flex-grow border-2"
+    class="md:w-2/5 w-full flex relative flex-grow"
   >
     <a :href="href">
       <div class="img">
