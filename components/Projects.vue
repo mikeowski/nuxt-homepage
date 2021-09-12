@@ -22,6 +22,7 @@
         class="Project-container"
         :name="'Recipe'"
         :src="'recipe'"
+        :href="'https://recipe-app-peach.vercel.app'"
       />
     </div>
   </div>
