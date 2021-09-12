@@ -10,7 +10,7 @@
             class="text-4xl sm:text-6xl md:text-7xl font-bold text-highlight text-center text-green-500"
             :steps="[
               '{Merhaba',
-              700,
+              500,
               '{Merhaba Dünya!}',
               500,
               '{Ben Burak 👋🏽}',
