@@ -1,7 +1,7 @@
 <template>
   <div class="space-y-20">
     <div
-      class="sc h-screen flex items-center justify-center pb-24 pt-80 starter"
+      class="sc h-screen flex items-center justify-center pb-2 pt-80 starter"
     >
       <div>
         <!--Starter-->
@@ -13,7 +13,7 @@
               500,
               '{Merhaba Dünya!}',
               500,
-              '{Ben Burak 👋🏽}',
+              '{Ben Yusuf 👋🏽}',
             ]"
             :wrapper="'h1'"
           ></typical>
