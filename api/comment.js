@@ -13,6 +13,7 @@ const app = express()
 app.use(bp.json())
 
 app.all('/', async function (req, res) {
+  //POST
   if (req.method === 'POST') {
     const { text, url, user } = req.body
 
@@ -41,6 +42,7 @@ app.all('/', async function (req, res) {
       return res.status(400).json({ message: 'Unexpected error occurred.' })
     }
   }
+  //GET 
   if (req.method === 'GET') {
     const { currentUrl } = req.query
     if (!currentUrl) {
