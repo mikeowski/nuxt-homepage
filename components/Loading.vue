@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="isLoading" class="flex justify-center items-center">
+    <div v-if="isLoading" class="flex justify-center items-center mt-2">
       <span class="text-highlight text-2xl animate-pulse">Yükleniyor</span>
     </div>
   </div>
@@ -18,4 +18,6 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>
