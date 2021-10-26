@@ -21,7 +21,7 @@
         <!--Description-->
         <div class="pt-32">
           <p class="font-bold text-xl text-center description opacity-0">
-            Merhaba ben Burak Mike {{ ageCalculator() }} yaşında, <br />developer ve aynı zamanda
+            Merhaba ben Burak Mike {{ ageCalculator()}} yaşında, <br />developer ve aynı zamanda
             Akdeniz Üniversitesi'nde öğrenciyim.<br />
             <br />Front-end teknolojileri ve tasarım araçları gibi konularla
             <br />yakından ilgileniyorum.<br />
