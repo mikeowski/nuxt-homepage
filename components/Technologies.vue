@@ -1,6 +1,6 @@
 <template>
   <div class="pt-40">
-    <h1 class="font-bold text-4xl text-center mb-8 technologies-text">
+    <h1 class="font-bold text-4xl text-center technologies-text">
       İlgilendiğim Teknolojiler
     </h1>
     <div
