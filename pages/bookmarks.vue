@@ -70,6 +70,10 @@ export default {
     position: relative;
     overflow: hidden;
 }
+.bookmark{
+  @apply
+  dark:bg-gray-900 
+}
 
 .bookmark span {
     color: black;
@@ -78,6 +82,9 @@ export default {
     transition: color 0.6s cubic-bezier(0.53, 0.21, 0, 1);
 }
 
+.bookmark span{
+  @apply dark:text-gray-400;
+}
 .bookmark::before {
     content: '';
     position: absolute;
@@ -87,12 +94,17 @@ export default {
     transform: translate(-100%, -50%);
     width: 100%;
     height: 100%;
-    background-color: hsl(244, 63%, 69%);
     transition: transform 0.6s cubic-bezier(0.53, 0.21, 0, 1);
 }
 
+.bookmark::before{
+  @apply dark:bg-green-500
+  bg-green-300
+}
+
 .bookmark:hover span {
-    color: white;
+    @apply dark:text-gray-100
+    text-gray-600;
 }
 
 .bookmark:hover::before {
