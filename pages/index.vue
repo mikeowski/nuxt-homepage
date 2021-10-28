@@ -112,8 +112,9 @@ export default {
     },
     ageCalculator(){
       const currentDate = DateTime.now()
-      const birthday = DateTime.fromISO('2001-11-01')
-      const age = parseInt(currentDate.diff(birthday,'days').toObject().days / 365)
+      const birthday = DateTime.fromISO('2000-11-01')
+      console.log(birthday);
+      const age = parseInt(currentDate.diff(birthday,'days').toObject().days / 365.25)
       return age
     }
   },

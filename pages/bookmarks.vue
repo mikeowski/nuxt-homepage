@@ -16,12 +16,12 @@
       <div
         v-for="bookmark in bookmarks"
         :key="bookmark._id"
-        class="flex space-x-2 hover:shadow-xl p-4 border-2 border-gray-100 dark:border-gray-800 rounded"
+        class="flex space-x-2 hover:shadow-xl p-4 border-2 border-gray-100 dark:border-gray-800"
       >
-        <a :href="bookmark.link" class="flex space-x-4">
+        <a :href="bookmark.link" class="flex space-x-4 bookmark">
           <div>
-            <h1 class="text-xl text-highlight">{{ bookmark.title }}</h1>
-            <p>{{ bookmark.domain }}・{{ formatDate(bookmark.created) }}</p>
+            <span class="text-xl text-highlight">{{ bookmark.title }}</span>
+            <span>{{ bookmark.domain }}・{{ formatDate(bookmark.created) }}</span>
           </div>
         </a>
       </div>
@@ -61,4 +61,42 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+
+.bookmark {
+    padding: 12px 24px;
+    background-color: white;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bookmark span {
+    color: black;
+    position: relative;
+    z-index: 1;
+    transition: color 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+}
+
+.bookmark::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 6px;
+    transform: translate(-100%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: hsl(244, 63%, 69%);
+    transition: transform 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+}
+
+.bookmark:hover span {
+    color: white;
+}
+
+.bookmark:hover::before {
+    transform: translate(0, -50%);
+}
+
+</style>
