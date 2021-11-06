@@ -66,7 +66,6 @@ export default {
 .bookmark {
     padding: 12px 24px;
     background-color: white;
-    border-radius: 6px;
     position: relative;
     overflow: hidden;
 }
@@ -90,21 +89,21 @@ export default {
     position: absolute;
     top: 50%;
     left: 0;
-    border-radius: 6px;
     transform: translate(-100%, -50%);
     width: 100%;
     height: 100%;
-    transition: transform 0.6s cubic-bezier(0.53, 0.21, 0, 1);
+    transition: transform 0.8s cubic-bezier(0.53, 0.21, 0, 1);
 }
 
 .bookmark::before{
-  @apply dark:bg-green-500
+  @apply dark:bg-green-600
   bg-green-300
+  
 }
 
 .bookmark:hover span {
     @apply dark:text-gray-100
-    text-gray-600;
+    text-gray-900;
 }
 
 .bookmark:hover::before {
