@@ -63,51 +63,19 @@ export default {
 
 <style scoped>
 
-.bookmark {
-    padding: 12px 24px;
-    background-color: white;
-    position: relative;
-    overflow: hidden;
-}
-.bookmark{
-  @apply
-  dark:bg-gray-900 
-}
 
-.bookmark span {
-    color: black;
-    position: relative;
-    z-index: 1;
-    transition: color 0.6s cubic-bezier(0.53, 0.21, 0, 1);
-}
 
-.bookmark span{
-  @apply dark:text-gray-400;
-}
-.bookmark::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(-100%, -50%);
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s cubic-bezier(0.53, 0.21, 0, 1);
-}
 
-.bookmark::before{
-  @apply dark:bg-green-600
-  bg-green-300
-  
+
+span {
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .bookmark:hover span {
-    @apply dark:text-gray-100
-    text-gray-900;
+  transform: translateX(4px);
+  color: #10B981;
 }
 
-.bookmark:hover::before {
-    transform: translate(0, -50%);
-}
 
 </style>
