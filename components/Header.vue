@@ -3,7 +3,8 @@
     <nav class="space-x-4 flex">
       <NavItem :path="'/'" :name="'.giriş()'" />
       <NavItem :path="'/notes'" :name="'.notlar()'" />
-      <NavItem :path="'/bookmarks'" :name="'.yerİmleri()'" />
+      <NavItem :name="'.galeri()'" :path="'/photos'"/>
+      <NavItem :path="'/bookmarks'" :name="'.yerİmleri()'" /> 
     </nav>
   </header>
 </template>
