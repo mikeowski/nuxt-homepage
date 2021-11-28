@@ -1,6 +1,7 @@
 <template>
-  <div class='sc h-screen flex items-center justify-center'>
+  <div class='sc h-screen flex items-center justify-center flex-col'>
    <h1 class='text-8xl font-bold animate-pulse'>404</h1>
+    <span class='text-3xl font-bold'>{{error.message}}</span>
   </div>
 </template>
 
