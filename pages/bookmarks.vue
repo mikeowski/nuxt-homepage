@@ -62,11 +62,6 @@ export default {
 </script>
 
 <style scoped>
-
-
-
-
-
 span {
   display: inline-block;
   transition: transform 0.2s ease, color 0.2s ease;
