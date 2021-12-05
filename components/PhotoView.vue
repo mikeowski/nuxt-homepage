@@ -3,7 +3,6 @@
       <vue-masonry-wall :items="photoData" :options='options'>
         <template v-slot:default="{item}">
           <a :href='item.href'><img :src="item.image" :alt='item.description'/></a>
-
         </template>
       </vue-masonry-wall>
     </div>
@@ -29,7 +28,7 @@ export default {
   data(){
     return{
       options: {
-        width: 400,
+        width: 500,
         padding: {
           2: 8,
           default: 12
