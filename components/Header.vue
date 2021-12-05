@@ -1,6 +1,6 @@
 <template>
   <header class="sc justify-center items-center py-6 z-50">
-    <nav class="sm:space-x-4 flex justify-center">
+    <nav class="space-x-4 flex justify-center">
       <template v-for="navItem in navItems">
         <NavItem :name="navItem.name" :path="navItem.path" />
       </template>
