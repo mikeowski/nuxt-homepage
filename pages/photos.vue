@@ -15,7 +15,7 @@
         </div>
       </div>
     </div>
-    <PhotoView :photoData='photoData'/>
+    <PhotoView :photoData='photoData' :isLoading='isLoading'/>
   </div>
 </template>
 
@@ -45,7 +45,7 @@ export default {
       this.statictics = await Unsplash.getDetails()
       const photos = await Unsplash.getPhotos()
       photos.forEach(v =>{
-        this.photoData.push({src:v.urls.regular,href:v.links.html,description:v.description})
+        this.photoData.push({image:v.urls.regular,href:v.links.html,description:v.description})
       })
       this.isLoading = false
     },

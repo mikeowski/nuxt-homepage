@@ -26,6 +26,7 @@
     "nanoid": "^3.1.22",
     "nuxt": "^2.15.3",
     "nuxt-svg-loader": "^1.2.0",
+    "vue-masonry-wall": "^0.3.2",
     "vue-typical": "^1.6.2"
   },
   "devDependencies": {

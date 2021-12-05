@@ -1,25 +1,39 @@
 <template>
-    <div v-if="!isLoading" class="grid lg:grid-cols-3 sm:grid-cols-2 sc-large">
-      <div v-for="photo in photoData" :key="photo.id">
-        <a :href="photo.href">
-          <img :src="photo.src" :alt="photo.description" />
-        </a>
-      </div>
+    <div v-if="!isLoading" class="sc-large">
+      <vue-masonry-wall :items="photoData" :options='options'>
+        <template v-slot:default="{item}">
+            <img :src="item.image"/>
+        </template>
+      </vue-masonry-wall>
     </div>
 </template>
 
 <script>
+import VueMasonryWall from 'vue-masonry-wall'
 export default {
   name:"PhotoView",
   props:{
     photoData:{
       type:Array,
       required:true,
+    },
+    isLoading:{
+      type:Boolean,
+      required:true,
     }
+  },
+  components:{
+    VueMasonryWall
   },
   data(){
     return{
-      photoData:[],
+      options: {
+        width: 400,
+        padding: {
+          2: 8,
+          default: 12
+        },
+      },
     }
   },
   created() {
