@@ -4,13 +4,13 @@
     <div v-if="!isLoading" class="sc flex space-x-8 justify-between mb-8">
       <div class="unsplashContainer">
         <a href="https://unsplash.com/@mahykisreal" class='hover:underline dark:text-gray-400'>Unsplash Views</a>
-        <div class="text-2xl sm:text-4xl bold">
+        <div class="text-4xl bold">
           {{ statictics.views.total }}
         </div>
       </div>
       <div class="unsplashContainer">
         <a href="https://unsplash.com/@mahykisreal" class='hover:underline dark:text-gray-400'>Unsplash Downloads</a>
-        <div class="text-2xl sm:text-4xl bold">
+        <div class="text-4xl bold">
           {{ statictics.downloads.total }}
         </div>
       </div>

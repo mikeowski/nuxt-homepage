@@ -72,6 +72,6 @@
     dark:bg-gray-700 dark:text-gray-300 p-3;
   }
   .unsplashContainer{
-    @apply flex-col h-24 border-2 dark:border-gray-500 rounded-lg w-1/2 justify-center items-center p-4
+    @apply flex-col h-24 border-2 dark:border-gray-500 rounded-lg w-1/2 justify-center items-center p-3
   }
 }
