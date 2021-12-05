@@ -58,5 +58,4 @@ export default {
 .nav-link-ltr:hover::before {
   width: 100%;
 }
-
 </style>

@@ -1,6 +1,15 @@
 <template>
   <div id="Projects">
-    <div class="flex flex-col flex-wrap md:flex-row justify-center gap-4 sc-large mb-12">
+    <div
+      class="
+        flex flex-col flex-wrap
+        md:flex-row
+        justify-center
+        gap-4
+        sc-large
+        mb-12
+      "
+    >
       <ProjectContainer
         class="Project-container"
         :src="'quastionaire'"

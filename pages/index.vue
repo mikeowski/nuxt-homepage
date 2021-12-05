@@ -7,7 +7,13 @@
         <!--Starter-->
         <div>
           <typical
-            class="text-4xl sm:text-6xl md:text-7xl font-bold text-highlight text-center text-green-500"
+            class="
+              text-4xl
+              sm:text-6xl
+              md:text-7xl
+              font-bold
+              text-highlight text-center text-green-500
+            "
             :steps="[
               '{Merhaba',
               500,
@@ -21,8 +27,9 @@
         <!--Description-->
         <div class="pt-32">
           <p class="font-bold text-xl text-center description opacity-0">
-            Merhaba ben Burak Mike {{ ageCalculator() }} yaşında, <br />developer ve aynı zamanda
-            Akdeniz Üniversitesi'nde öğrenciyim.<br />
+            Merhaba ben Burak Mike {{ ageCalculator() }} yaşında,
+            <br />developer ve aynı zamanda Akdeniz Üniversitesi'nde
+            öğrenciyim.<br />
             <br />Front-end teknolojileri ve tasarım araçları gibi konularla
             <br />yakından ilgileniyorum.<br />
             Kendimce geliştirdiğim Projelerime Github adresimden
@@ -40,7 +47,16 @@
     </div>
     <!-- My Projects-->
     <div
-      class="pt-14 pb-4 h-screen flex flex-col items-center justify-baseline projects gap-4"
+      class="
+        pt-14
+        pb-4
+        h-screen
+        flex flex-col
+        items-center
+        justify-baseline
+        projects
+        gap-4
+      "
     >
       <div>
         <h1 class="text-center font-bold text-4xl mb-4">Projeler</h1>
@@ -48,7 +64,18 @@
       </div>
     </div>
     <div
-      class="bottom-8 right-4 fixed flex justify-center items-center flex-col md:block hidden text-center"
+      class="
+        bottom-8
+        right-4
+        fixed
+        flex
+        justify-center
+        items-center
+        flex-col
+        md:block
+        hidden
+        text-center
+      "
     >
       <arrow-down fill="white" class="animate-bounce" /> Scroll <br />
       Down
@@ -59,7 +86,7 @@
 <script>
 import typical from 'vue-typical'
 import { gsap } from 'gsap'
-import { DateTime} from 'luxon'
+import { DateTime } from 'luxon'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import ProjectContainer from '../components/Project-container'
 import Technologies from '../components/Technologies'
@@ -110,13 +137,15 @@ export default {
         ease: 'power1',
       })
     },
-    ageCalculator(){
+    ageCalculator() {
       const currentDate = DateTime.now()
       const birthday = DateTime.fromISO('2000-11-01')
-      console.log(birthday);
-      const age = parseInt(currentDate.diff(birthday,'days').toObject().days / 365.25)
+      console.log(birthday)
+      const age = parseInt(
+        currentDate.diff(birthday, 'days').toObject().days / 365.25
+      )
       return age
-    }
+    },
   },
 }
 </script>

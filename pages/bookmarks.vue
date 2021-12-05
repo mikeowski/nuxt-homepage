@@ -16,12 +16,21 @@
       <div
         v-for="bookmark in bookmarks"
         :key="bookmark._id"
-        class="flex space-x-2 hover:shadow-xl p-4 border-2 border-gray-100 dark:border-gray-800"
+        class="
+          flex
+          space-x-2
+          hover:shadow-xl
+          p-4
+          border-2 border-gray-100
+          dark:border-gray-800
+        "
       >
         <a :href="bookmark.link" class="flex space-x-4 bookmark">
           <div>
             <span class="text-xl text-highlight">{{ bookmark.title }}</span>
-            <span>{{ bookmark.domain }}・{{ formatDate(bookmark.created) }}</span>
+            <span
+              >{{ bookmark.domain }}・{{ formatDate(bookmark.created) }}</span
+            >
           </div>
         </a>
       </div>
@@ -69,8 +78,6 @@ span {
 
 .bookmark:hover span {
   transform: translateX(4px);
-  color: #10B981;
+  color: #10b981;
 }
-
-
 </style>

@@ -59,7 +59,7 @@ export default {
   transform-origin: 100% 100%;
 }
 .sk-folding-cube .sk-cube:before {
- @apply dark:bg-gray-400
+  @apply dark:bg-gray-400;
 }
 .sk-folding-cube .sk-cube2 {
   -webkit-transform: scale(1.1) rotateZ(90deg);
