@@ -13,7 +13,7 @@
               500,
               '{Merhaba Dünya!}',
               500,
-              '{Ben Burak 👋🏽}',
+              '{Ben Burak 👋}',
             ]"
             :wrapper="'h1'"
           ></typical>
