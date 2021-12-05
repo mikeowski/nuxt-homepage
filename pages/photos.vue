@@ -1,44 +1,53 @@
 <template>
-  <div class='sc-large'>
-    <Loading :is-loading='isLoading'/>
-
-    <div v-if='!  isLoading' class='grid lg:grid-cols-3 sm:grid-cols-2'>
-      <div v-for='photo in data'>
-        <a :href='photo.links.html'>
-        <img :src='photo.urls.regular' :alt='photo.alt-description' >
-        </a>
+  <div>
+    <Loading :is-loading="isLoading" />
+    <div v-if="!isLoading" class="sc flex space-x-8  justify-between mb-8">
+      <div class="unsplashContainer">
+        <a href="https://unsplash.com/@mahykisreal" class='hover:underline dark:text-gray-400'>Unsplash Views</a>
+        <div class="text-4xl bold">
+          {{ statictics.views.total }}
+        </div>
+      </div>
+      <div class="unsplashContainer">
+        <a href="https://unsplash.com/@mahykisreal" class='hover:underline dark:text-gray-400'>Unsplash Downloads</a>
+        <div class="text-4xl bold">
+          {{ statictics.downloads.total }}
+        </div>
       </div>
     </div>
+    <PhotoView :photoData='photoData'/>
   </div>
 </template>
 
 <script>
+import PhotoView from '../components/PhotoView'
 import Unsplash from '../lib/unsplash.js'
 import Loading from '../components/Loading'
 export default {
   name: 'Photos',
-  data(){
-    return{
-      data:[],
-      isLoading: true
+  data() {
+    return {
+      statictics: [],
+      photoData: [],
+      isLoading: true,
     }
   },
-  components:{
+  components: {
     Loading,
+    PhotoView
   },
   created() {
-    this.getPhotos()
+    this.getData()
   },
 
-  methods:{
-    async getPhotos(){
-      this.data = await Unsplash.getPhotos()
-      this.isLoading = false;
-    }
-  }
+  methods: {
+    async getData() {
+      this.statictics = await Unsplash.getDetails()
+      this.photoData = await Unsplash.getPhotos()
+      this.isLoading = false
+    },
+  },
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
