@@ -2,7 +2,8 @@
     <div v-if="!isLoading" class="sc-large">
       <vue-masonry-wall :items="photoData" :options='options'>
         <template v-slot:default="{item}">
-            <img :src="item.image"/>
+          <a :href='item.href'><img :src="item.image"/></a>
+
         </template>
       </vue-masonry-wall>
     </div>
