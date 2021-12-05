@@ -17,7 +17,6 @@ export default {
     return {
       navItems: [
         { path: '/', name: '.giriş()' },
-        { path: '/notes', name: '.notlar()' },
         { path: '/projects', name: '.projeler()' },
         { path: '/photos', name: '.galeri()' },
         { path: '/bookmarks', name: '.yerİmleri()' },
