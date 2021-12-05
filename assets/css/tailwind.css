@@ -38,7 +38,7 @@
 @layer components {
   html {
     @apply bg-white text-gray-600 antialiased
-    dark:bg-gray-900 dark:text-gray-400;
+    dark:bg-gray-900 dark:text-gray-300;
   }
 
   ::selection {
@@ -70,5 +70,8 @@
     @apply flex items-center justify-center bg-gray-200 text-gray-600 rounded-full transition-colors
     hover:bg-opacity-75
     dark:bg-gray-700 dark:text-gray-300 p-3;
+  }
+  .unsplashContainer{
+    @apply flex-col h-24 border-2 dark:border-gray-500 rounded-lg w-1/2 justify-center items-center p-4
   }
 }
