@@ -43,7 +43,10 @@ export default {
   methods: {
     async getData() {
       this.statictics = await Unsplash.getDetails()
-      this.photoData = await Unsplash.getPhotos()
+      const photos = await Unsplash.getPhotos()
+      photos.forEach(v =>{
+        this.photoData.push({src:v.urls.regular,href:v.links.html,description:v.description})
+      })
       this.isLoading = false
     },
   },
