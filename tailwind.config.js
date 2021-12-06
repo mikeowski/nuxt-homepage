@@ -1,6 +1,7 @@
 const { fontFamily, spacing } = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 module.exports = {
+  mode: 'jit',
   purge: [
     './components/**/*.{vue,js}',
     './layouts/**/*.vue',

@@ -77,8 +77,8 @@
         text-center
       "
     >
-      <arrow-down fill="white" class="animate-bounce" /> Scroll <br />
-      Down
+       <arrow-down-white class='animate-bounce opacity-0 dark:opacity-100'/>
+      <arrow-down class="animate-bounce dark:hidden" />Scroll<br />Down
     </div>
   </div>
 </template>
@@ -90,6 +90,7 @@ import { DateTime } from 'luxon'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import ProjectContainer from '../components/Project-container'
 import Technologies from '../components/Technologies'
+import arrowDownWhite from '../assets/icons/arrow-down white.svg'
 import arrowDown from '../assets/icons/arrow-down.svg'
 import Social from '../components/Social'
 import Projects from '../components/Projects'
@@ -103,6 +104,7 @@ export default {
     Technologies,
     typical,
     arrowDown,
+    arrowDownWhite
   },
   mounted() {
     this.Animation()
