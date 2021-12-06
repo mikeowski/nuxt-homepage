@@ -140,13 +140,10 @@ export default {
       })
     },
     ageCalculator() {
-      const currentDate = DateTime.now()
-      const birthday = DateTime.fromISO('2000-11-01')
-      console.log(birthday)
-      const age = parseInt(
-        currentDate.diff(birthday, 'days').toObject().days / 365.25
-      )
-      return age
+      const now = DateTime.local()
+      const birthday = DateTime.local(2000, 11, 1)
+      const diff = now.diff(birthday, 'years')
+      return parseInt(diff.years)
     },
   },
 }
