@@ -7,13 +7,7 @@
         <!--Starter-->
         <div>
           <typical
-            class="
-              text-4xl
-              sm:text-6xl
-              md:text-7xl
-              font-bold
-              text-highlight text-center text-green-500
-            "
+            class="text-4xl sm:text-6xl md:text-7xl font-bold text-highlight text-center text-green-500"
             :steps="[
               '{Merhaba',
               500,
@@ -47,16 +41,7 @@
     </div>
     <!-- My Projects-->
     <div
-      class="
-        pt-14
-        pb-4
-        h-screen
-        flex flex-col
-        items-center
-        justify-baseline
-        projects
-        gap-4
-      "
+      class="pt-14 pb-4 h-screen flex flex-col items-center justify-baseline projects gap-4"
     >
       <div>
         <h1 class="text-center font-bold text-4xl mb-4">Projeler</h1>
@@ -64,20 +49,9 @@
       </div>
     </div>
     <div
-      class="
-        bottom-8
-        right-4
-        fixed
-        flex
-        justify-center
-        items-center
-        flex-col
-        md:block
-        hidden
-        text-center
-      "
+      class="bottom-8 right-4 fixed flex justify-center items-center flex-col md:block hidden text-center"
     >
-       <arrow-down-white class='animate-bounce opacity-0 dark:opacity-100'/>
+      <arrow-down-white class="animate-bounce opacity-0 dark:opacity-100" />
       <arrow-down class="animate-bounce dark:hidden" />Scroll<br />Down
     </div>
   </div>
@@ -104,7 +78,7 @@ export default {
     Technologies,
     typical,
     arrowDown,
-    arrowDownWhite
+    arrowDownWhite,
   },
   mounted() {
     this.Animation()

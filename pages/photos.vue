@@ -3,19 +3,27 @@
     <Loading :is-loading="isLoading" />
     <div v-if="!isLoading" class="sc flex space-x-8 justify-between mb-8">
       <div class="unsplashContainer">
-        <a href="https://unsplash.com/@mahykisreal" class='hover:underline dark:text-gray-400'>Unsplash Views</a>
+        <a
+          href="https://unsplash.com/@mahykisreal"
+          class="hover:underline dark:text-gray-400"
+          >Unsplash Views</a
+        >
         <div class="text-4xl bold">
           {{ statictics.views.total }}
         </div>
       </div>
       <div class="unsplashContainer">
-        <a href="https://unsplash.com/@mahykisreal" class='hover:underline dark:text-gray-400'>Unsplash Downloads</a>
+        <a
+          href="https://unsplash.com/@mahykisreal"
+          class="hover:underline dark:text-gray-400"
+          >Unsplash Downloads</a
+        >
         <div class="text-4xl bold">
           {{ statictics.downloads.total }}
         </div>
       </div>
     </div>
-    <PhotoView :photoData='photoData' :isLoading='isLoading'/>
+    <PhotoView :photoData="photoData" :isLoading="isLoading" />
   </div>
 </template>
 
@@ -34,7 +42,7 @@ export default {
   },
   components: {
     Loading,
-    PhotoView
+    PhotoView,
   },
   created() {
     this.getData()
@@ -44,8 +52,12 @@ export default {
     async getData() {
       this.statictics = await Unsplash.getDetails()
       const photos = await Unsplash.getPhotos()
-      photos.forEach(v =>{
-        this.photoData.push({image:v.urls.regular,href:v.links.html,description:v.description})
+      photos.forEach((v) => {
+        this.photoData.push({
+          image: v.urls.regular,
+          href: v.links.html,
+          description: v.description,
+        })
       })
       this.isLoading = false
     },
