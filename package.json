@@ -13,7 +13,6 @@
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.15.0",
     "@hapi/boom": "^9.1.2",
-    "@nuxt/content": "^1.14.0",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.3.5",
     "@tailwindcss/typography": "^0.4.0",
