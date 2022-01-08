@@ -1,14 +1,7 @@
 <template>
   <div id="Projects">
     <div
-      class="
-        flex flex-col flex-wrap
-        md:flex-row
-        justify-center
-        gap-4
-        sc-large
-        mb-12
-      "
+      class="flex flex-col flex-wrap md:flex-row justify-center gap-4 sc-large mb-12"
     >
       <ProjectContainer
         class="Project-container"
@@ -44,12 +37,8 @@ export default {
   components: {
     ProjectContainer,
   },
-  mounted() {
-
-  },
-  methods: {
-
-  },
+  mounted() {},
+  methods: {},
 }
 </script>
 

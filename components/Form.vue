@@ -4,16 +4,7 @@
       <textarea
         v-model="currentCommit"
         rows="3"
-        class="
-          w-full
-          bg-gray-100
-          border border-gray-800
-          dark:border-gray-500
-          rounded
-          px-2
-          py-1
-          dark:bg-gray-800
-        "
+        class="w-full bg-gray-100 border border-gray-800 dark:border-gray-500 rounded px-2 py-1 dark:bg-gray-800"
       >
       </textarea>
 

@@ -4,13 +4,7 @@
       <slot />
     </figure>
     <hr
-      class="
-        mt-5
-        border border-gray-200
-        dark:border-gray-300
-        hidden
-        sm:inline-block
-      "
+      class="mt-5 border border-gray-200 dark:border-gray-300 hidden sm:inline-block"
     />
     <h1 class="text-center mt-4 hidden sm:inline">{{ name }}</h1>
   </a>

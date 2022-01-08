@@ -4,13 +4,7 @@
       İlgilendiğim Teknolojiler
     </h1>
     <div
-      class="
-        flex flex-wrap
-        items-center
-        md:justify-evenly
-        justify-center
-        technologies-container
-      "
+      class="flex flex-wrap items-center md:justify-evenly justify-center technologies-container"
     >
       <technologies-container :href="JavaScriptLink" :name="'JavaScript'">
         <IconJs fill="white" />
