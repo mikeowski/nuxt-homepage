@@ -1,15 +1,14 @@
 <template>
-  <div>
-    <Header />
-    <Nuxt class="mainAnimation"/>
-  </div>
+    <div>
+        <Header />
+        <Nuxt class="mainAnimation" />
+    </div>
 </template>
 
-<style>
-</style>
+<style></style>
 <script>
 import Header from '../components/Header'
 export default {
-  components: { Header },
+    components: { Header },
 }
 </script>

@@ -1,37 +1,37 @@
 <template>
-  <div class="sc pt-10">
-    <a :href="href">
-      <div class="img">
-        <img
-          :src="require(`~/assets/img/projects/${src}.png`)"
-          :alt="src"
-          class="z-10"
-          width="100%"
-          height="100%"
-        />
-      </div>
-    </a>
-  </div>
+    <div class="sc pt-10">
+        <a :href="href">
+            <div class="img">
+                <img
+                    :src="require(`~/assets/img/projects/${src}.png`)"
+                    :alt="src"
+                    class="z-10"
+                    width="100%"
+                    height="100%"
+                />
+            </div>
+        </a>
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'Project-detailed',
-  props: {
-    src: {
-      type: String,
-      required: true,
+    name: 'Project-detailed',
+    props: {
+        src: {
+            type: String,
+            required: true,
+        },
+        name: {
+            type: String,
+            required: true,
+        },
+        href: {
+            type: String,
+            default: 'https://github.com/MahykBurak',
+            required: false,
+        },
     },
-    name: {
-      type: String,
-      required: true,
-    },
-    href: {
-      type: String,
-      default: 'https://github.com/MahykBurak',
-      required: false,
-    },
-  },
 }
 </script>
 
@@ -41,6 +41,6 @@ export default {
 .img img {
 }
 .img:hover h1 {
-  display: none;
+    display: none;
 }
 </style>
