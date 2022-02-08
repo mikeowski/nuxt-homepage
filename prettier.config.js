@@ -1,7 +1,7 @@
 // prettier.config.js
 module.exports = {
     tailwindConfig: './tailwind.config.js',
-    tabWidth: 4,
+    tabWidth: 2,
     semi: false,
     singleQuote: true,
 }
