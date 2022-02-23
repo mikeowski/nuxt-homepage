@@ -27,6 +27,9 @@
       <technologies-container :href="cssTrickLink" :name="'Css'">
         <IconCss fill="#E54B4B" />
       </technologies-container>
+      <technologies-container :href="flutterLink" :name="'Flutter'">
+        <IconFlutter fill="blue" />
+      </technologies-container>
     </div>
   </div>
 </template>
@@ -42,6 +45,7 @@ import IconFigma from '../assets/icons/figma.svg'
 import IconNuxt from '../assets/icons/nuxt-dot-js.svg'
 import IconTailwind from '../assets/icons/tailwindcss.svg'
 import TechnologiesContainer from './technologies-container'
+import IconFlutter from '../assets/icons/flutter.svg'
 export default {
   name: 'Technologies',
   components: {
@@ -53,6 +57,7 @@ export default {
     IconTailwind,
     IconNuxt,
     IconCss,
+    IconFlutter,
   },
   data() {
     return {
@@ -63,6 +68,7 @@ export default {
       JavaScriptLink: 'https://www.javascript.com/',
       nuxtLink: 'https://nuxtjs.org/',
       cssTrickLink: 'https://css-tricks.com/',
+      flutterLink: 'https://flutter.dev',
     }
   },
   mounted() {

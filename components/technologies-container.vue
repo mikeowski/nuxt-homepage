@@ -1,7 +1,7 @@
 <template>
   <a :href="href" class="svg-container technologies-box">
     <figure class="item">
-      <slot />
+      <slot class="svg-container-img" />
     </figure>
     <hr
       class="mt-5 hidden border border-gray-200 dark:border-gray-300 sm:inline-block"
