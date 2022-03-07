@@ -9,7 +9,7 @@
           : 'text-gray-600 dark:text-gray-400'
       "
     >
-      <a class="font-serif text-xl font-bold">{{ name }}</a>
+      <a class="font-serif font-bold sm:text-xl">{{ name }}</a>
       <hr
         v-if="$route.path === path"
         class="absolute bottom-0 w-full border-b-2 border-green-500"
