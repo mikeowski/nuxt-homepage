@@ -1,5 +1,5 @@
 <template>
-  <div class="sc pt-10">
+  <div class="sc relative pt-10">
     <a :href="href">
       <div class="img">
         <img
@@ -9,6 +9,9 @@
           width="100%"
           height="100%"
         />
+      </div>
+      <div class="absolute">
+        <h1>{{ name }}</h1>
       </div>
     </a>
   </div>
