@@ -18,6 +18,11 @@
             :wrapper="'h1'"
           ></typical>
         </div>
+        <div
+          class="scroll fixed bottom-0 mx-auto mb-4 w-screen animate-bounce text-center text-lg sm:hidden"
+        >
+          Scroll Down
+        </div>
         <!--Description-->
         <div class="pt-32">
           <p class="description text-center text-xl font-bold opacity-0">
@@ -102,6 +107,15 @@ export default {
           // markers:true
         },
         opacity: 1,
+      })
+      gsap.to('.scroll', {
+        scrollTrigger: {
+          trigger: '.starter',
+          start: '200px top',
+          toggleActions: 'restart pause resume reverse',
+          // markers:true
+        },
+        opacity: 0,
       })
       tl.from('.description', {
         ease: 'power1',
