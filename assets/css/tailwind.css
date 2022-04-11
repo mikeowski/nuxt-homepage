@@ -74,6 +74,6 @@
     hover:bg-opacity-75 dark:bg-gray-700 dark:text-gray-300;
   }
   .unsplashContainer {
-    @apply h-24 w-1/2 flex-col items-center justify-center rounded-lg border-2 p-3 dark:border-gray-500;
+    @apply h-24 w-full flex-col items-center justify-center rounded-xl border-2 p-3 dark:border-gray-500 sm:w-1/2;
   }
 }
