@@ -3,7 +3,7 @@
     <Loading :is-loading="isLoading" />
     <div
       v-if="!isLoading"
-      class="sc sm:pace-x-8 mb-8 flex w-full flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0"
+      class="sc mb-8 flex w-full flex-col items-center justify-between space-y-4 sm:flex-row sm:space-x-8 sm:space-y-0"
     >
       <div class="unsplashContainer">
         <a
