@@ -11,7 +11,7 @@
           class="hover:underline dark:text-gray-400"
           >Unsplash Views</a
         >
-        <div class="bold text-2xl sm:text-4xl">
+        <div class="bold text-4xl">
           {{ statictics.views.total }}
         </div>
       </div>
@@ -21,7 +21,7 @@
           class="hover:underline dark:text-gray-400"
           >Unsplash Downloads</a
         >
-        <div class="bold text-2xl sm:text-4xl">
+        <div class="bold text-4xl">
           {{ statictics.downloads.total }}
         </div>
       </div>
