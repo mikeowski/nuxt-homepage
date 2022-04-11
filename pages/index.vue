@@ -19,7 +19,7 @@
           ></typical>
         </div>
         <div
-          class="scroll fixed bottom-0 mx-auto mb-4 w-screen animate-bounce text-center text-lg sm:hidden"
+          class="scroll fixed bottom-0 mx-auto mb-4 w-screen animate-bounce text-center text-lg md:hidden"
         >
           Scroll Down
         </div>
@@ -34,6 +34,7 @@
             Kendimce geliştirdiğim Projelerime Github adresimden
             ulaşabilirisiniz
           </p>
+          <!--! TODO add https://www.buymeacoffee.com/burakmike  -->
           <div class="flex justify-center pt-12 opacity-100">
             <Social />
           </div>
@@ -111,7 +112,7 @@ export default {
       gsap.to('.scroll', {
         scrollTrigger: {
           trigger: '.starter',
-          start: '200px top',
+          start: '100px top',
           toggleActions: 'restart pause resume reverse',
           // markers:true
         },

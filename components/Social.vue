@@ -20,6 +20,11 @@
         <IconGithub />
       </a>
     </div>
+    <div class="social-container opacity-0">
+      <a href="https://www.buymeacoffee.com/burakmike">
+        <Span class="font-bold">Support me</Span>
+      </a>
+    </div>
   </div>
 </template>
 
