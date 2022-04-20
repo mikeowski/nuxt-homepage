@@ -5,12 +5,12 @@
         <img
           :src="require(`~/assets/img/projects/${src}.png`)"
           :alt="src"
-          class="z-10"
+          class="z-10 rounded-2xl"
           width="100%"
           height="100%"
         />
       </div>
-      <div class="absolute">
+      <div class="text-3xl">
         <h1>{{ name }}</h1>
       </div>
     </a>

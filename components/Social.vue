@@ -1,7 +1,7 @@
 <template>
   <div class="flex space-x-4">
     <div class="social-container opacity-0">
-      <a href="mailto:burakmahyk@gmail.com">
+      <a href="mailto:bm@burakmike.software">
         <Span class="font-bold">Eposta</Span>
       </a>
     </div>

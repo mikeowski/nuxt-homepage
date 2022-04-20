@@ -34,7 +34,6 @@
             Kendimce geliştirdiğim Projelerime Github adresimden
             ulaşabilirisiniz
           </p>
-          <!--! TODO add https://www.buymeacoffee.com/burakmike  -->
           <div class="flex justify-center pt-12 opacity-100">
             <Social />
           </div>
