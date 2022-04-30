@@ -16,7 +16,7 @@
               '{Ben Burak 👋}',
             ]"
             :wrapper="'h1'"
-          ></typical>
+          />
         </div>
         <div
           class="scroll fixed bottom-0 mx-auto mb-4 w-screen animate-bounce text-center text-lg md:hidden"

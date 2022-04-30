@@ -38,7 +38,7 @@
   }
 }
 @layer components {
-  html {
+  body {
     @apply bg-white text-gray-600 antialiased
     dark:bg-gray-900 dark:text-gray-300;
   }
